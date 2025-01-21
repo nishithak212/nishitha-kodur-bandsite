@@ -1,0 +1,8 @@
+@use './variables' as *;
+
+//Mixin for mobile
+@mixin mobile{
+@media (min-width:$mobile-breakpoint){
+    @content;
+}
+}
