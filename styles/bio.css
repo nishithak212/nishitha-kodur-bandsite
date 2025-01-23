@@ -1,1 +1,235 @@
-/*# sourceMappingURL=bio.css.map */
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "NunitoSans";
+  src: url("../../assets/Font/NunitoSans-Regular.woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NunitoSans";
+  src: url("../../assets/Font/NunitoSans-Medium.woff");
+  font-weight: 500;
+  font-style: medium;
+}
+@font-face {
+  font-family: "NunitoSans";
+  src: url("../../assets/Font/NunitoSans-Bold.woff");
+  font-weight: 700;
+  font-style: bold;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #323232;
+  padding: 20px;
+  width: 100%;
+  /*@include tablet{ 
+  flex-direction:row;
+  }
+  @include desktop{
+  padding:40px; (eg)
+  }
+   */
+}
+.header__title {
+  margin-bottom: 0.625rem;
+}
+.header__title a {
+  text-decoration: none;
+}
+.header__title-img {
+  max-height: 1.25rem;
+  max-width: 7.5rem;
+}
+.header__nav {
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+.header__nav-bar {
+  width: 100%;
+}
+.header__nav-bar-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  width: 50%;
+  justify-content: space-between;
+  margin: auto;
+}
+.header__nav-bar-list-item a {
+  font-family: "NunitoSans";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: bold 700;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  font-weight: bold 700;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+  margin-bottom: 2rem;
+}
+.header__nav-bar-list-item a:hover {
+  opacity: 1;
+}
+.header__nav-bar-list-item a.active {
+  font-weight: bold;
+  opacity: 1;
+  padding-top: 2rem;
+  border-bottom: 2px solid white;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  padding-left: 1.5rem;
+  background-image: url("../assets/Images/hero-bio.jpg");
+  background-position: center;
+  background-size: cover;
+  flex-direction: column;
+  height: 14rem;
+  color: #FFFFFF;
+  font-family: "NunitoSans";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: bold 700;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #323232;
+  opacity: 0.5;
+}
+
+.hero__title::before {
+  position: relative;
+}
+
+.content {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #323232;
+}
+.content__image {
+  width: 100%;
+}
+.content__title {
+  font-family: "NunitoSans";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: bold 700;
+}
+.content__quote {
+  font-family: "NunitoSans";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: regular 400;
+}
+.content__quote--bold {
+  font-weight: bold;
+}
+.content__aboutband-title {
+  font-family: "NunitoSans";
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: demi 600;
+}
+.content__aboutband-paraone {
+  font-family: "NunitoSans";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: regular 400;
+  padding-bottom: 1rem;
+}
+.content__aboutband-paratwo {
+  font-family: "NunitoSans";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: regular 400;
+}
+
+.photo-container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #FAFAFA;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.photo-container__title {
+  font-family: "NunitoSans";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: bold 700;
+  color: #323232;
+}
+.photo-container__gallery-image {
+  width: 100%;
+  height: 15rem;
+  margin-bottom: 1rem;
+}
+
+.footer {
+  background-color: #323232;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.footer__title {
+  font-family: "NunitoSans";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: bold 700;
+  color: #FFFFFF;
+}
+.footer-social {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+.footer_banddetails {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+.footer__brand-img {
+  max-height: 1.25rem;
+  max-width: 7.5rem;
+}
+.footer-banddetails-bandmgmt__title {
+  font-family: "NunitoSans";
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: demi 600;
+  color: #FFFFFF;
+}
+.footer-banddetails-bandmgmt__contact {
+  font-family: "NunitoSans";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: regular 400;
+  color: #FFFFFF;
+}
+.footer-copyright {
+  font-family: "NunitoSans";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: regular 400;
+  color: #FFFFFF;
+}/*# sourceMappingURL=bio.css.map */
