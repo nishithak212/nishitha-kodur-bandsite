@@ -1,8 +1,60 @@
 @use './variables' as *;
+@use './global' as *;
+@use './typography' as *;
 
 //Mixin for mobile
-@mixin mobile{
-@media (min-width:$mobile-breakpoint){
-    @content;
+// @mixin mobile{
+// @media (min-width:$mobile-breakpoint){
+//     @content;
+// }
+// }
+
+//Mixin for tablet
+@mixin tablet{
+    @media (min-width:$tablet-breakpoint){
+        @content;
+    }
 }
+
+//Mixin for desktop
+@mixin tablet{
+    @media (min-width:$desktop-breakpoint){
+        @content;
+    }
+}
+
+//Mixin for BANDSITE logo
+@mixin logo-bandsite{
+    max-height: 1.25rem;
+    max-width: 7.5rem;
+}
+
+//Mixin for page header mobile text style
+
+@mixin pageHeaderM{
+    font-family: 'NunitoSans';
+    font-size: $fontSize-pageHeaderM;
+    line-height: $lineHeight-pageHeaderM;
+    font-weight:$fontWeight-pageHeaderM;
+}
+
+@mixin sectionHeaderM{
+    font-family: 'NunitoSans';
+    font-size: $fontSize-sectionHeaderM;
+    line-height: $lineHeight-sectionHeaderM;
+    font-weight:$fontWeight-sectionHeaderM;
+}
+
+@mixin bodyCopyM{
+    font-family:'NunitoSans';
+    font-size:$fontSize-bodyCopyM;
+    line-height: $lineHeight-bodyCopyM;
+    font-weight: $fontWeight-bodyCopyM;
+}
+
+@mixin subHeaderM{
+    font-family:'NunitoSans';
+    font-size:$fontSize-subHeaderM;
+    line-height: $lineHeight-subHeaderM;
+    font-weight: $fontWeight-subHeaderM;
 }
