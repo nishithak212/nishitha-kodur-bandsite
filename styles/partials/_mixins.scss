@@ -25,8 +25,8 @@
 
 //Mixin for BANDSITE logo
 @mixin logo-bandsite{
-    max-height: 1.25rem;
-    max-width: 7.5rem;
+    height: 3rem;
+    width: 11rem;
 }
 
 //Mixin for page header mobile text style
@@ -57,4 +57,18 @@
     font-size:$fontSize-subHeaderM;
     line-height: $lineHeight-subHeaderM;
     font-weight: $fontWeight-subHeaderM;
+}
+
+@mixin footerCopyM{
+    font-family:'NunitoSans';
+    font-size: $fontSize-footerCopyM;
+    line-height:$lineHeight-footerCopyM;
+    $fontWeight-footerCopyM:400;
+}
+
+@mixin labelButtonsM{
+    font-family: 'NunitoSans';
+    font-size:$fontSize-labelsButtonsM;
+    font-weight:$lineHeight-labelsButtonsM;
+    font-weight:$fontWeight-labelsButtonsM;
 }

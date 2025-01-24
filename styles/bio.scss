@@ -1,91 +1,104 @@
-@use './partials/variables' as *;
-@use './partials/mixins' as *;
-@use './partials/global' as *;
-@use './partials/typography' as *;
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+@use "./partials/global" as *;
+@use "./partials/typography" as *;
 
-//need to work on the nav bar tabs (active and hover)
+
+*{
+    box-sizing:border-box;
+}
+
 .header {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color:$primary-bandSiteBlack;
-    padding: 20px;
-    width:100%;
- /*@include tablet{ 
+  flex-direction: column;
+  align-items: center;
+  background-color: $primary-bandSiteBlack;
+  padding-top: 20px;
+  padding-bottom:0;
+  width: 100%;
+  /*@include tablet{ 
 flex-direction:row;
 }
 @include desktop{
 padding:40px; (eg)
 }
  */
-    &__title {
-      margin-bottom: 0.625rem;
-  
-      a {
-        text-decoration: none;
-      }
-  
-      &-img {
-       @include logo-bandsite;
-      }
+  &__title {
+    margin-bottom: 0.625rem;
+
+    a {
+      text-decoration: none;
     }
-  
-    &__nav{
-        display:flex;
-        width:100%;
-        text-align:center;
-    &-bar{
-        width:100%;
-        &-list{
+
+    &-img {
+      @include logo-bandsite;
+    }
+  }
+
+&__nav-bar {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+    &-list {
+      display: flex;
+      list-style: none;
+      padding-top: 0;
+      margin-bottom: 0;
+      justify-content: space-evenly;
+      padding-left:0;
+
+     
+
+      &-item {
+        a {
             display:flex;
-            list-style: none;
-            padding:0;
-            width:50%;
-            justify-content: space-between;
-            margin:auto;
-            &-item a{
-                @include sectionHeaderM;
-                              text-decoration: none;
-                              color: $primary-white;
-                              font-size: $fontSize-subHeaderM;
-                              font-weight:$fontWeight-sectionHeaderM;
-                              opacity: 0.8;
-                              transition: opacity 0.3s;
-                              margin-bottom: 2rem;
-                              &:hover {
-                                    opacity: 1; //to highlight link on hover
-                                        }
-                                &.active{
-                                    font-weight:bold;
-                                    opacity:1;
-                                    padding-top: 2rem;
-                                    border-bottom:2px solid white;
-                                      }
+            @include sectionHeaderM;
+          text-decoration: none;
+          color: $primary-white;
+          font-size: $fontSize-sectionHeaderM;
+          font-weight: $fontWeight-sectionHeaderM;
+          opacity: 0.8;
+          transition: opacity 0.3s, border-bottom 0.3s;
+          padding-bottom:0.22rem;
 
-            }
+          &.header__nav-bar-list-item-active {
+            display: flex;
+            font-weight: bold;
+            opacity: 1;
+            justify-content: flex-start;
+            border-bottom: 2px solid $primary-white;
+            width:7rem;
+          }
+    
+          &:hover, &:active {
+            opacity: 1;
+          }
+          
         }
+      }
     }
- }
+  }
 }
 
-// //overlay of primary bandsite black works with 50%, but unable to position hero title above overlay
-.hero{
-display:flex;
-justify-content:center;
-padding-left:1.5rem;
-background-image: url("../assets/Images/hero-bio.jpg");
-background-position: center;
-background-size: cover;
-flex-direction: column;
-height:14rem;
-color:$primary-white;
-@include pageHeaderM;
-position:relative;
-overflow:hidden;
-}
+.hero {
+  display: flex;
+  justify-content: center;
+  padding-left: 1.5rem;
+  background-image: url("../assets/Images/hero-bio.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  height: 27rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 100%;
 
-.hero::before {
-    content: '';
+  &__overlay-color {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -95,102 +108,117 @@ overflow:hidden;
     opacity: 0.5;
   }
 
-  .hero__title::before{
-    position: relative;
+  &__banner {
+    display: flex;
+    margin-top: 1.0575rem;
+    top: 11.1875rem;
+    &-title,
+    &__banner-title{
+      color: $primary-white;
+      @include pageHeaderM;
+      font-size:2.5rem;
+      display: flex;
+      position: relative;
+    }
+  }
+}
+
+.content {
+  padding: 1.5rem 1rem 1rem 1rem;
+  color: $primary-bandSiteBlack;
+  width: 100%;
+
+  &__image {
+    width: 100%;
+    height: 29rem;
   }
 
-.content{
-padding-top: 1.5rem;
-padding-bottom:1rem;
-padding-left:1rem;
-padding-right:1rem;
-color:$primary-bandSiteBlack;
-
-
-&__image{
-    width: 100%;
-}
-
-&__title{
+  &__title {
     @include sectionHeaderM;
-}
+  }
 
-&__quote{
+  &__quote {
     @include bodyCopyM;
+    width: 100%;
 
-    &--bold{
-        font-weight:bold;
+    &--bold {
+      font-weight: bold;
+      display: flex;
+      width: 100%;
     }
-}
-&__aboutband-title{
+  }
+  &__aboutband-title {
     @include subHeaderM;
-}
-&__aboutband-paraone{
+  }
+  &__aboutband-paraone {
     @include bodyCopyM;
     padding-bottom: $padding-btwComponentsM;
-}
+    width: 96%;
+  }
 
-&__aboutband-paratwo{
+  &__aboutband-paratwo {
     @include bodyCopyM;
-}
-}
-
-.photo-container{
-    padding-top:1rem;
-    padding-bottom:1rem;
-    background-color: $secondary-alabaster;
-    padding-left:1rem;
-    padding-right:1rem;
-    
-    &__title{
-        @include sectionHeaderM;
-        color:$primary-bandSiteBlack;
-    }
-
-    &__gallery-image{
-        width: 100%;
-        height: 15rem;
-        margin-bottom:1rem;
-    }
+    width: 96%;
+  }
 }
 
-.footer{
-    background-color: $primary-bandSiteBlack;
-    padding-top: 1.5rem;
-    padding-bottom: 1rem;
-    padding-left:1rem;
-    padding-right: 1rem;
+.photo-container {
+  padding: 1rem;
+  background-color: $secondary-alabaster;
+  width: 100%;
 
-    &__title{
-        @include pageHeaderM;
-        color:$primary-white;
-    }
+  &__title {
+    @include sectionHeaderM;
+    color: $primary-bandSiteBlack;
+  }
 
-    &-social{
-        display: flex;
-        justify-content:space-around;
-        width:50%;
-    }
-        &_banddetails{
-            display: flex;
-            flex-direction: column;
-            padding-bottom:2rem;
-        }
-    
-        &__brand-img{
-            @include logo-bandsite;
-        }
-        &-banddetails-bandmgmt__title{
-            @include subHeaderM;
-            color:$primary-white;
-        }
-        &-banddetails-bandmgmt__contact{
-            @include bodyCopyM;
-            color:$primary-white;
-        }
+  &__gallery-image {
+    width: 100%;
+    height: 29rem;
+    margin-bottom: 1rem;
+  }
+}
 
-        &-copyright{
-            @include bodyCopyM;
-            color:$primary-white;
-        }
-    }
+.footer {
+  background-color: $primary-bandSiteBlack;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+
+  &__title {
+    @include pageHeaderM;
+    color: $primary-white;
+  }
+
+  &-social {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2.5rem;
+    width: 50%;
+  }
+  &_banddetails {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    @include footerCopyM;
+  }
+
+  &__brand-img {
+    @include logo-bandsite;
+  }
+  &-banddetails-bandmgmt__title {
+    @include footerCopyM;
+    color: $primary-white;
+  }
+  &-banddetails-bandmgmt__contact {
+    @include footerCopyM;
+    color: $primary-white;
+  }
+
+  &-copyright {
+    @include footerCopyM;
+    color: $primary-white;
+  }
+}

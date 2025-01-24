@@ -22,12 +22,17 @@ body {
   font-weight: 700;
   font-style: bold;
 }
+* {
+  box-sizing: border-box;
+}
+
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #323232;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 0;
   width: 100%;
   /*@include tablet{ 
   flex-direction:row;
@@ -44,46 +49,47 @@ body {
   text-decoration: none;
 }
 .header__title-img {
-  max-height: 1.25rem;
-  max-width: 7.5rem;
-}
-.header__nav {
-  display: flex;
-  width: 100%;
-  text-align: center;
+  height: 3rem;
+  width: 11rem;
 }
 .header__nav-bar {
   width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 .header__nav-bar-list {
   display: flex;
   list-style: none;
-  padding: 0;
-  width: 50%;
-  justify-content: space-between;
-  margin: auto;
+  padding-top: 0;
+  margin-bottom: 0;
+  justify-content: space-evenly;
+  padding-left: 0;
 }
 .header__nav-bar-list-item a {
+  display: flex;
   font-family: "NunitoSans";
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: bold 700;
+  font-weight: 700;
   text-decoration: none;
   color: #FFFFFF;
-  font-size: 0.875rem;
-  font-weight: bold 700;
+  font-size: 1.5rem;
+  font-weight: 700;
   opacity: 0.8;
-  transition: opacity 0.3s;
-  margin-bottom: 2rem;
+  transition: opacity 0.3s, border-bottom 0.3s;
+  padding-bottom: 0.22rem;
 }
-.header__nav-bar-list-item a:hover {
-  opacity: 1;
-}
-.header__nav-bar-list-item a.active {
+.header__nav-bar-list-item a.header__nav-bar-list-item-active {
+  display: flex;
   font-weight: bold;
   opacity: 1;
-  padding-top: 2rem;
-  border-bottom: 2px solid white;
+  justify-content: flex-start;
+  border-bottom: 2px solid #FFFFFF;
+  width: 7rem;
+}
+.header__nav-bar-list-item a:hover, .header__nav-bar-list-item a:active {
+  opacity: 1;
 }
 
 .hero {
@@ -93,18 +99,15 @@ body {
   background-image: url("../assets/Images/hero-bio.jpg");
   background-position: center;
   background-size: cover;
-  flex-direction: column;
-  height: 14rem;
-  color: #FFFFFF;
-  font-family: "NunitoSans";
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: bold 700;
   position: relative;
   overflow: hidden;
+  height: 27rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 100%;
 }
-
-.hero::before {
+.hero__overlay-color {
   content: "";
   position: absolute;
   top: 0;
@@ -114,73 +117,86 @@ body {
   background: #323232;
   opacity: 0.5;
 }
-
-.hero__title::before {
+.hero__banner {
+  display: flex;
+  margin-top: 1.0575rem;
+  top: 11.1875rem;
+}
+.hero__banner-title, .hero__banner__banner-title {
+  color: #FFFFFF;
+  font-family: "NunitoSans";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  font-size: 2.5rem;
+  display: flex;
   position: relative;
 }
 
 .content {
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 1.5rem 1rem 1rem 1rem;
   color: #323232;
+  width: 100%;
 }
 .content__image {
   width: 100%;
+  height: 29rem;
 }
 .content__title {
   font-family: "NunitoSans";
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: bold 700;
+  font-weight: 700;
 }
 .content__quote {
   font-family: "NunitoSans";
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-weight: regular 400;
+  font-weight: 400;
+  width: 100%;
 }
 .content__quote--bold {
   font-weight: bold;
+  display: flex;
+  width: 100%;
 }
 .content__aboutband-title {
   font-family: "NunitoSans";
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-weight: demi 600;
+  font-weight: 600;
 }
 .content__aboutband-paraone {
   font-family: "NunitoSans";
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-weight: regular 400;
+  font-weight: 400;
   padding-bottom: 1rem;
+  width: 96%;
 }
 .content__aboutband-paratwo {
   font-family: "NunitoSans";
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-weight: regular 400;
+  font-weight: 400;
+  width: 96%;
 }
 
 .photo-container {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
   background-color: #FAFAFA;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  width: 100%;
 }
 .photo-container__title {
   font-family: "NunitoSans";
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: bold 700;
+  font-weight: 700;
   color: #323232;
 }
 .photo-container__gallery-image {
   width: 100%;
-  height: 15rem;
+  height: 29rem;
   margin-bottom: 1rem;
 }
 
@@ -190,46 +206,48 @@ body {
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  width: 100%;
 }
 .footer__title {
   font-family: "NunitoSans";
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: bold 700;
+  font-weight: 700;
   color: #FFFFFF;
 }
 .footer-social {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  gap: 2.5rem;
   width: 50%;
 }
 .footer_banddetails {
   display: flex;
   flex-direction: column;
   padding-bottom: 2rem;
+  font-family: "NunitoSans";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
 }
 .footer__brand-img {
-  max-height: 1.25rem;
-  max-width: 7.5rem;
+  height: 3rem;
+  width: 11rem;
 }
 .footer-banddetails-bandmgmt__title {
   font-family: "NunitoSans";
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-weight: demi 600;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
   color: #FFFFFF;
 }
 .footer-banddetails-bandmgmt__contact {
   font-family: "NunitoSans";
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-weight: regular 400;
   color: #FFFFFF;
 }
 .footer-copyright {
   font-family: "NunitoSans";
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-weight: regular 400;
   color: #FFFFFF;
 }/*# sourceMappingURL=bio.css.map */
