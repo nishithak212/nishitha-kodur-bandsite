@@ -247,19 +247,24 @@
   background-color: $secondary-alabaster;
   width: 100%;
   @include tablet{
-    padding: 2rem;
+    padding-left: 3.125rem;
+    padding-right:3.125rem;
+    padding-bottom:3.125rem
   }
 
   &__title {
     @include sectionHeaderM;
     color: $primary-bandSiteBlack;
+    @include tablet{
+        @include pageHeaderDT;
+    }
   }
 
   @include tablet{
     .photo-container__gallery{
         display:grid;
         grid-template-columns: repeat(3,1fr);
-        gap:2rem;
+        gap:2.5rem;
     }
   }
   &__gallery-image {

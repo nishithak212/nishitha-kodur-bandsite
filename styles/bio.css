@@ -308,7 +308,9 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .photo-container {
-    padding: 2rem;
+    padding-left: 3.125rem;
+    padding-right: 3.125rem;
+    padding-bottom: 3.125rem;
   }
 }
 .photo-container__title {
@@ -319,10 +321,18 @@ body {
   color: #323232;
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {
+  .photo-container__title {
+    font-family: "NunitoSans";
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
   .photo-container .photo-container__gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 2.5rem;
   }
 }
 .photo-container__gallery-image {
