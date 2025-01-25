@@ -9,7 +9,8 @@ $secondary-alabaster:  #FAFAFA;
 
 //Breakpoints
 $mobile-breakpoint:320px;
-$tablet-breakpoint:768px;
+$tablet-breakpointmin:768px;
+$tablet-breakpointmax:1280px;
 $desktop-breakpoint:1280px;
 
 
@@ -63,12 +64,12 @@ $fontWeight-subHeaderDT:500;
 
 $fontSize-bodyCopyDT:.875rem;
 $lineHeight-bodyCopyDT:1.375rem;
-$fontWeight-bodyCopyRegDT: regular 400;
+$fontWeight-bodyCopyRegDT:400;
 $fontWeight-bodyCopyBoldDT: 700;
 
 $fontSize-footerCopyDT:.875rem;
 $lineHeight-footerCopyDT:1.25rem;
-$fontWeight-footerCopyRegDT: regular 400;
+$fontWeight-footerCopyRegDT:400;
 $fontWeight-footerCopyBoldDT: 400;
 
 $fontSize-labelsButtonsDT:.75rem;

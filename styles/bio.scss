@@ -16,32 +16,38 @@
   padding-top: 20px;
   padding-bottom:0;
   width: 100%;
-  /*@include tablet{ 
-flex-direction:row;
+  @include tablet{ 
+    flex-direction:row;
 }
-@include desktop{
-padding:40px; (eg)
-}
- */
   &__title {
     margin-bottom: 0.625rem;
-
-    a {
-      text-decoration: none;
+    @include tablet{
+    display:flex;
+    padding-left:2rem;
+    align-items:baseline
+    }
+     
     }
 
-    &-img {
+    &__title-link{
+        text-decoration: none;
+    }
+
+    &__title-img {
       @include logo-bandsite;
+      @include tablet{
+        padding-left:2rem;
+      }
     }
-  }
 
-&__nav-bar {
+
+&__navbar {
     width: 100%;
     text-align: center;
     margin: 0;
     padding: 0;
-
-    &-list {
+}
+    &__navbar-list {
       display: flex;
       list-style: none;
       padding-top: 0;
@@ -49,10 +55,14 @@ padding:40px; (eg)
       justify-content: space-evenly;
       padding-left:0;
 
-     
-
-      &-item {
-        a {
+     @include tablet{
+        justify-content: flex-start;
+        gap:4rem;
+        padding-left:6rem;
+     }
+    }
+      &__navbar-list-item {
+       a{
             display:flex;
             @include sectionHeaderM;
           text-decoration: none;
@@ -61,26 +71,31 @@ padding:40px; (eg)
           font-weight: $fontWeight-sectionHeaderM;
           opacity: 0.8;
           transition: opacity 0.3s, border-bottom 0.3s;
-          padding-bottom:0.22rem;
+          padding-bottom:2.22rem;
 
-          &.header__nav-bar-list-item-active {
+          @include tablet{
+            @include subHeaderDT;
+          }
+
+          .header__navbar-list-item-active {
             display: flex;
             font-weight: bold;
             opacity: 1;
             justify-content: flex-start;
-            border-bottom: 2px solid $primary-white;
-            width:7rem;
+            // border-bottom: .25rem solid $primary-white;
+            // width:7rem;
           }
     
-          &:hover, &:active {
+          &:active {
             opacity: 1;
+            border-bottom: .25rem solid $primary-white;
+            width:7rem;
           }
           
         }
       }
     }
-  }
-}
+  
 
 .hero {
   display: flex;
@@ -97,6 +112,9 @@ padding:40px; (eg)
   align-content: flex-start;
   width: 100%;
 
+  @include tablet{
+    height:40rem;
+  }
   &__overlay-color {
     content: "";
     position: absolute;
@@ -119,6 +137,9 @@ padding:40px; (eg)
       font-size:2.5rem;
       display: flex;
       position: relative;
+      @include tablet{
+        @include pageHeaderDT;
+      }
     }
   }
 }
@@ -128,25 +149,84 @@ padding:40px; (eg)
   color: $primary-bandSiteBlack;
   width: 100%;
 
+  @include tablet{
+    padding: 3rem 2.25rem 3rem 2.25rem;
+  }
+
   &__image {
     width: 100%;
     height: 29rem;
+    padding-bottom:$padding-aheadlinesM;
+
+    @include tablet{
+        display:flex;
+        margin:auto;
+        width: 78%;
+        height: 32rem;
+        padding-bottom: $padding-aheadlinesDT;
+    }
   }
 
   &__title {
     @include sectionHeaderM;
+    @include tablet{
+        @include sectionHeaderDT;
+        padding-bottom:$padding-aheadlinesDT;
+        font-size: 2.5rem;
+        line-height: 1.375rem;
+        display:flex;
+        justify-content: center;
+        width:50%;
+        padding-top:36px;
+    }
   }
 
   &__quote {
     @include bodyCopyM;
     width: 100%;
+    font-weight:bold;
+    padding-top:$padding-aheadlinesM;
 
-    &--bold {
+    @include tablet{
+        //display:flex;
+        margin:auto;
+        @include bodyCopyDTBold;
+        display:flex;
+        
+    }
+    &--boldone {
       font-weight: bold;
       display: flex;
       width: 100%;
+      @include tablet{
+        display:flex;
+        margin:auto;
+        @include bodyCopyDTBold;
+        font-size:1.875rem;
+        line-height: 2.375rem;
+        justify-content: center;
+        width:75%;
+        flex-wrap:wrap;
+        flex-direction: column;
     }
-  }
+}
+
+    &--boldtwo{
+        @include bodyCopyM;
+    font-weight: bold;
+    display: flex;
+    width: 100%;
+    @include tablet{
+        @include bodyCopyDTBold;
+        font-size:1.2rem;
+        line-height: 1.125rem;
+        font-weight:bold;
+        display:flex;
+        width:52%;
+        justify-content: center
+    }
+    }
+}
   &__aboutband-title {
     @include subHeaderM;
   }
@@ -166,16 +246,31 @@ padding:40px; (eg)
   padding: 1rem;
   background-color: $secondary-alabaster;
   width: 100%;
+  @include tablet{
+    padding: 2rem;
+  }
 
   &__title {
     @include sectionHeaderM;
     color: $primary-bandSiteBlack;
   }
 
+  @include tablet{
+    .photo-container__gallery{
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        gap:2rem;
+    }
+  }
   &__gallery-image {
     width: 100%;
     height: 29rem;
     margin-bottom: 1rem;
+    @include tablet{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
   }
 }
 
@@ -192,13 +287,13 @@ padding:40px; (eg)
     color: $primary-white;
   }
 
-  &-social {
+  &__social {
     display: flex;
     justify-content: flex-start;
     gap: 2.5rem;
     width: 50%;
   }
-  &_banddetails {
+  &__banddetails {
     display: flex;
     flex-direction: column;
     padding-bottom: 2rem;
@@ -208,16 +303,16 @@ padding:40px; (eg)
   &__brand-img {
     @include logo-bandsite;
   }
-  &-banddetails-bandmgmt__title {
+  &__banddetails-bandmgmt-title {
     @include footerCopyM;
     color: $primary-white;
   }
-  &-banddetails-bandmgmt__contact {
+  &__banddetails-bandmgmt-contact {
     @include footerCopyM;
     color: $primary-white;
   }
 
-  &-copyright {
+  &__copyright {
     @include footerCopyM;
     color: $primary-white;
   }

@@ -11,14 +11,14 @@
 
 //Mixin for tablet
 @mixin tablet{
-    @media (min-width:$tablet-breakpoint){
+    @media screen and (min-width:$tablet-breakpointmin) and (max-width:$tablet-breakpointmax){
         @content;
     }
 }
 
 //Mixin for desktop
-@mixin tablet{
-    @media (min-width:$desktop-breakpoint){
+@mixin desktop{
+    @media screen and (min-width:$desktop-breakpoint){
         @content;
     }
 }
@@ -29,7 +29,7 @@
     width: 11rem;
 }
 
-//Mixin for page header mobile text style
+//Mixin for mobile text style
 
 @mixin pageHeaderM{
     font-family: 'NunitoSans';
@@ -71,4 +71,57 @@
     font-size:$fontSize-labelsButtonsM;
     font-weight:$lineHeight-labelsButtonsM;
     font-weight:$fontWeight-labelsButtonsM;
+}
+
+//Mixin for tablet and desktop  text style
+
+@mixin pageHeaderDT{
+    font-family: 'NunitoSans';
+    font-size: $fontSize-pageHeaderDT;
+    line-height:$lineHeight-pageHeaderDT;
+    font-weight:$fontWeight-pageHeaderDT;
+}
+
+@mixin sectionHeaderDT{
+    font-family: 'NunitoSans';
+    font-size: $fontSize-sectionHeaderDT;
+    line-height: $lineHeight-sectionHeaderDT;
+    font-weight:$fontWeight-sectionHeaderDT;
+}
+
+@mixin bodyCopyDTReg{
+    font-family:'NunitoSans';
+    font-size:$fontSize-bodyCopyDT;
+    line-height: $lineHeight-bodyCopyDT;
+    font-weight: $fontWeight-bodyCopyRegDT;
+    font-weight:$fontWeight-bodyCopyBoldDT;
+}
+
+@mixin bodyCopyDTBold{
+    font-family:'NunitoSans';
+    font-size:$fontSize-bodyCopyDT;
+    line-height: $lineHeight-bodyCopyDT;
+    font-weight:$fontWeight-bodyCopyBoldDT;
+}
+
+
+@mixin subHeaderDT{
+    font-family:'NunitoSans';
+    font-size:$fontSize-subHeaderDT;
+    line-height: $lineHeight-subHeaderDT;
+    font-weight: $fontWeight-subHeaderDT;
+}
+
+@mixin footerCopyDT{
+    font-family:'NunitoSans';
+    font-size: $fontSize-footerCopyDT;
+    line-height:$lineHeight-footerCopyDT;
+    font-weight:$fontWeight-footerCopyRegDT;
+}
+
+@mixin labelButtonsDT{
+    font-family: 'NunitoSans';
+    font-size:$fontSize-labelsButtonsDT;
+    font-weight:$lineHeight-labelsButtonsDT;
+    font-weight:$fontWeight-labelsButtonsDT;
 }
