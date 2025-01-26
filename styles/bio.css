@@ -31,13 +31,20 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #323232;
-  padding-top: 20px;
+  padding-top: 1.25rem;
   padding-bottom: 0;
   width: 100%;
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .header {
     flex-direction: row;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .header {
+    flex-direction: row;
+    width: 100%;
+    height: 6.5rem;
   }
 }
 .header__title {
@@ -50,16 +57,32 @@ body {
     align-items: baseline;
   }
 }
+@media screen and (min-width: 1281px) {
+  .header__title {
+    display: flex;
+    padding-left: 11rem;
+    align-items: baseline;
+    align-items: center;
+  }
+}
 .header__title-link {
   text-decoration: none;
 }
 .header__title-img {
-  height: 3rem;
-  width: 11rem;
+  height: 1.25rem;
+  width: 7.5rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .header__title-img {
     padding-left: 2rem;
+    height: 5.25rem;
+    width: 15.5rem;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .header__title-img {
+    height: 1.25rem;
+    width: 7.5rem;
   }
 }
 .header__navbar {
@@ -83,6 +106,17 @@ body {
     padding-left: 6rem;
   }
 }
+@media screen and (min-width: 1281px) {
+  .header__navbar-list {
+    justify-content: flex-start;
+    gap: 4rem;
+    padding-left: 6rem;
+    font-family: "NunitoSans";
+    font-size: 0.75rem;
+    font-weight: 1.25rem;
+    font-weight: 700;
+  }
+}
 .header__navbar-list-item a {
   display: flex;
   font-family: "NunitoSans";
@@ -91,7 +125,7 @@ body {
   font-weight: 700;
   text-decoration: none;
   color: #FFFFFF;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 700;
   opacity: 0.8;
   transition: opacity 0.3s, border-bottom 0.3s;
@@ -103,6 +137,14 @@ body {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 500;
+    font-size: 1.52rem;
+    padding-bottom: 3.22rem;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .header__navbar-list-item a {
+    font-size: 1rem;
+    padding-bottom: 2.22rem;
   }
 }
 .header__navbar-list-item a .header__navbar-list-item-active {
@@ -135,6 +177,12 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .hero {
     height: 40rem;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .hero {
+    height: 46rem;
+    width: 100%;
   }
 }
 .hero__overlay-color {
@@ -170,6 +218,17 @@ body {
     font-weight: 700;
   }
 }
+@media screen and (min-width: 1281px) {
+  .hero__banner-title, .hero__banner__banner-title {
+    padding-left: 7rem;
+    padding-bottom: 8rem;
+    font-family: "NunitoSans";
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+    font-size: 3.4rem;
+  }
+}
 
 .content {
   padding: 1.5rem 1rem 1rem 1rem;
@@ -177,6 +236,11 @@ body {
   width: 100%;
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {
+  .content {
+    padding: 3rem 2.25rem 3rem 2.25rem;
+  }
+}
+@media screen and (min-width: 1281px) {
   .content {
     padding: 3rem 2.25rem 3rem 2.25rem;
   }
@@ -190,7 +254,16 @@ body {
   .content__image {
     display: flex;
     margin: auto;
-    width: 78%;
+    width: 84%;
+    height: 35rem;
+    padding-bottom: 2.25rem;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .content__image {
+    display: flex;
+    margin: auto;
+    width: 73%;
     height: 32rem;
     padding-bottom: 2.25rem;
   }
@@ -208,52 +281,57 @@ body {
     line-height: 2.75rem;
     font-weight: 700;
     padding-bottom: 2.25rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 1.375rem;
     display: flex;
-    justify-content: center;
-    width: 50%;
-    padding-top: 36px;
+    justify-content: flex-start;
+    width: 60%;
+    padding-top: 0;
+    padding-bottom: 0.875rem;
   }
 }
-.content__quote {
+@media screen and (min-width: 1281px) {
+  .content__title {
+    padding-left: 5rem;
+    padding-top: 0;
+    font-family: "NunitoSans";
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+  }
+}
+.content__quote--boldone {
   font-family: "NunitoSans";
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
   width: 100%;
   font-weight: bold;
-  padding-top: 1rem;
-}
-@media screen and (min-width: 768px) and (max-width: 1280px) {
-  .content__quote {
-    margin: auto;
-    font-family: "NunitoSans";
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    font-weight: 700;
-    display: flex;
-  }
-}
-.content__quote--boldone {
-  font-weight: bold;
-  display: flex;
-  width: 100%;
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .content__quote--boldone {
-    display: flex;
-    margin: auto;
     font-family: "NunitoSans";
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: 700;
-    font-size: 1.875rem;
+    font-size: 1.275rem;
+    line-height: 1.55rem;
+    margin-top: 0;
+    padding-left: 5.5rem;
+    width: 93%;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .content__quote--boldone {
+    font-family: "NunitoSans";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 700;
+    font-size: 1.475rem;
     line-height: 2.375rem;
-    justify-content: center;
-    width: 75%;
-    flex-wrap: wrap;
-    flex-direction: column;
+    margin-top: 0;
+    padding-left: 11.8rem;
+    width: 89%;
   }
 }
 .content__quote--boldtwo {
@@ -271,12 +349,20 @@ body {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: 700;
-    font-size: 1.2rem;
-    line-height: 1.125rem;
-    font-weight: bold;
-    display: flex;
-    width: 52%;
-    justify-content: center;
+    padding-left: 5.5rem;
+    width: 85%;
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .content__quote--boldtwo {
+    font-family: "NunitoSans";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 700;
+    padding-left: 11.8rem;
+    width: 85%;
+    font-size: 1rem;
   }
 }
 .content__aboutband-title {
@@ -284,6 +370,50 @@ body {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .content__aboutband-title {
+    font-family: "NunitoSans";
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    display: flex;
+    padding-left: 5.5rem;
+    padding-top: 2.25rem;
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .content__aboutband-title {
+    font-family: "NunitoSans";
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    display: flex;
+    padding-left: 11.8rem;
+    padding-top: 2.25rem;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .content__aboutband-para {
+    display: flex;
+    gap: 6rem;
+    padding-left: 5.625rem;
+    padding-right: 5.625rem;
+    width: 100%;
+    padding-bottom: 0;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .content__aboutband-para {
+    display: flex;
+    gap: 3rem;
+    padding-left: 11.8rem;
+    padding-right: 11.8rem;
+    width: 100%;
+    padding-bottom: 0;
+  }
 }
 .content__aboutband-paraone {
   font-family: "NunitoSans";
@@ -293,12 +423,66 @@ body {
   padding-bottom: 1rem;
   width: 96%;
 }
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .content__aboutband-paraone {
+    font-family: "NunitoSans";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 2.075rem;
+    font-weight: 400;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .content__aboutband-paraone {
+    font-family: "NunitoSans";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.575rem;
+    font-weight: 400;
+    width: 109%;
+    padding-bottom: 1rem;
+  }
+}
 .content__aboutband-paratwo {
   font-family: "NunitoSans";
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
   width: 96%;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .content__aboutband-paratwo {
+    font-family: "NunitoSans";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 2.075rem;
+    font-weight: 400;
+    width: 97%;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .content__aboutband-paratwo {
+    font-family: "NunitoSans";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.575rem;
+    font-weight: 400;
+    width: 107%;
+    padding-bottom: 1rem;
+  }
 }
 
 .photo-container {
@@ -311,6 +495,14 @@ body {
     padding-left: 3.125rem;
     padding-right: 3.125rem;
     padding-bottom: 3.125rem;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .photo-container {
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+    padding-bottom: 3.125rem;
+    width: 100%;
   }
 }
 .photo-container__title {
@@ -326,9 +518,26 @@ body {
     font-size: 3.75rem;
     line-height: 4.25rem;
     font-weight: 700;
+    font-size: 2.75rem;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .photo-container__title {
+    font-family: "NunitoSans";
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+    font-size: 2.6rem;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {
+  .photo-container .photo-container__gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
+@media screen and (min-width: 1281px) {
   .photo-container .photo-container__gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -348,6 +557,14 @@ body {
        object-fit: cover;
   }
 }
+@media screen and (min-width: 1281px) {
+  .photo-container__gallery-image {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 
 .footer {
   background-color: #323232;
@@ -357,18 +574,65 @@ body {
   padding-right: 1rem;
   width: 100%;
 }
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .footer {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .footer {
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+  }
+}
 .footer__title {
   font-family: "NunitoSans";
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
   color: #FFFFFF;
+  position: relative;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .footer__title {
+    font-family: "NunitoSans";
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .footer__title {
+    font-family: "NunitoSans";
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+  }
 }
 .footer__social {
   display: flex;
   justify-content: flex-start;
   gap: 2.5rem;
   width: 50%;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .footer__social {
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+    position: absolute;
+    left: 19rem;
+    top: 222.5rem;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .footer__social {
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+    position: absolute;
+    left: 22.5rem;
+    top: 198rem;
+  }
 }
 .footer__banddetails {
   display: flex;
@@ -378,9 +642,44 @@ body {
   font-size: 0.8125rem;
   line-height: 1.125rem;
 }
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .footer__banddetails {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .footer__banddetails {
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 3.2rem;
+    text-align: left;
+    padding-right: 38rem;
+  }
+}
 .footer__brand-img {
-  height: 3rem;
-  width: 11rem;
+  height: 1.25rem;
+  width: 7.5rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .footer__brand-img {
+    height: 1.25rem;
+    width: 7.5rem;
+    position: absolute;
+    right: 5rem;
+    top: 215.5rem;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .footer__brand-img {
+    height: 1.25rem;
+    width: 7.5rem;
+    position: absolute;
+    right: 6rem;
+    top: 198rem;
+  }
 }
 .footer__banddetails-bandmgmt-title {
   font-family: "NunitoSans";
@@ -388,15 +687,65 @@ body {
   line-height: 1.125rem;
   color: #FFFFFF;
 }
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .footer__banddetails-bandmgmt-title {
+    font-family: "NunitoSans";
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .footer__banddetails-bandmgmt-title {
+    font-family: "NunitoSans";
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+  }
+}
 .footer__banddetails-bandmgmt-contact {
   font-family: "NunitoSans";
   font-size: 0.8125rem;
   line-height: 1.125rem;
   color: #FFFFFF;
 }
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .footer__banddetails-bandmgmt-contact {
+    font-family: "NunitoSans";
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .footer__banddetails-bandmgmt-contact {
+    font-family: "NunitoSans";
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+  }
+}
 .footer__copyright {
   font-family: "NunitoSans";
   font-size: 0.8125rem;
   line-height: 1.125rem;
   color: #FFFFFF;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .footer__copyright {
+    text-align: left;
+    font-family: "NunitoSans";
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .footer__copyright {
+    text-align: left;
+    font-family: "NunitoSans";
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+  }
 }/*# sourceMappingURL=bio.css.map */

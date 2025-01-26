@@ -8,23 +8,38 @@
     box-sizing:border-box;
 }
 
+
 .header {
     display: flex;
   flex-direction: column;
   align-items: center;
   background-color: $primary-bandSiteBlack;
-  padding-top: 20px;
+  padding-top: 1.25rem;
   padding-bottom:0;
   width: 100%;
   @include tablet{ 
     flex-direction:row;
+    
 }
+
+@include desktop{
+    flex-direction:row;
+    width:100%;
+    height:6.5rem;
+}
+
   &__title {
     margin-bottom: 0.625rem;
     @include tablet{
     display:flex;
     padding-left:2rem;
-    align-items:baseline
+    align-items:baseline;
+    }
+    @include desktop{
+        display:flex;
+    padding-left:11rem;
+    align-items:baseline;
+    align-items:center;
     }
      
     }
@@ -37,6 +52,13 @@
       @include logo-bandsite;
       @include tablet{
         padding-left:2rem;
+        //@include logo-bandsite;
+        height:5.25rem;
+        width:15.5rem;
+
+      }
+      @include desktop{
+        @include logo-bandsite;
       }
     }
 
@@ -60,6 +82,13 @@
         gap:4rem;
         padding-left:6rem;
      }
+
+     @include desktop{
+        justify-content: flex-start;
+        gap:4rem;
+        padding-left:6rem;
+        @include labelButtonsDT;
+     }
     }
       &__navbar-list-item {
        a{
@@ -67,7 +96,7 @@
             @include sectionHeaderM;
           text-decoration: none;
           color: $primary-white;
-          font-size: $fontSize-sectionHeaderM;
+          font-size: 1rem;
           font-weight: $fontWeight-sectionHeaderM;
           opacity: 0.8;
           transition: opacity 0.3s, border-bottom 0.3s;
@@ -75,6 +104,13 @@
 
           @include tablet{
             @include subHeaderDT;
+            font-size:1.52rem;
+            padding-bottom:3.22rem;
+          }
+
+          @include desktop{
+            font-size:1rem;
+            padding-bottom:2.22rem;
           }
 
           .header__navbar-list-item-active {
@@ -115,6 +151,12 @@
   @include tablet{
     height:40rem;
   }
+
+  @include desktop{
+    height:46rem;
+    width:100%;
+  }
+
   &__overlay-color {
     content: "";
     position: absolute;
@@ -140,6 +182,12 @@
       @include tablet{
         @include pageHeaderDT;
       }
+      @include desktop{
+        padding-left:7rem;
+        padding-bottom:8rem;
+        @include pageHeaderDT;
+        font-size:3.4rem;
+      }
     }
   }
 }
@@ -153,6 +201,10 @@
     padding: 3rem 2.25rem 3rem 2.25rem;
   }
 
+  @include desktop{
+    padding: 3rem 2.25rem 3rem 2.25rem;
+  }
+
   &__image {
     width: 100%;
     height: 29rem;
@@ -161,7 +213,15 @@
     @include tablet{
         display:flex;
         margin:auto;
-        width: 78%;
+        width: 84%;
+        height: 35rem;
+        padding-bottom: $padding-aheadlinesDT;
+    }
+
+    @include desktop{
+        display:flex;
+        margin:auto;
+        width: 73%;
         height: 32rem;
         padding-bottom: $padding-aheadlinesDT;
     }
@@ -172,73 +232,143 @@
     @include tablet{
         @include sectionHeaderDT;
         padding-bottom:$padding-aheadlinesDT;
-        font-size: 2.5rem;
+        font-size: 2rem;
         line-height: 1.375rem;
         display:flex;
-        justify-content: center;
-        width:50%;
-        padding-top:36px;
+        justify-content: flex-start;
+        width:60%;
+        padding-top:0;
+        padding-bottom:0.875rem;
+    }
+    @include desktop{
+        padding-left:5rem;
+        padding-top:0;
+        @include sectionHeaderDT;
     }
   }
 
-  &__quote {
+  &__quote--boldone{
     @include bodyCopyM;
     width: 100%;
     font-weight:bold;
-    padding-top:$padding-aheadlinesM;
+    //display: flex;
 
     @include tablet{
-        //display:flex;
-        margin:auto;
         @include bodyCopyDTBold;
-        display:flex;
-        
+        font-size: 1.275rem;
+        line-height: 1.55rem;
+        margin-top: 0;
+        padding-left:5.5rem;
+        width:93%;
     }
-    &--boldone {
-      font-weight: bold;
-      display: flex;
-      width: 100%;
-      @include tablet{
-        display:flex;
-        margin:auto;
-        @include bodyCopyDTBold;
-        font-size:1.875rem;
-        line-height: 2.375rem;
-        justify-content: center;
-        width:75%;
-        flex-wrap:wrap;
-        flex-direction: column;
-    }
-}
 
-    &--boldtwo{
-        @include bodyCopyM;
+    @include desktop{
+        @include bodyCopyDTBold;
+        font-size: 1.475rem;
+        line-height: 2.375rem;
+        margin-top:0;
+        padding-left:11.8rem;
+        width:89%;
+    }
+  }
+
+  &__quote--boldtwo{
+    @include bodyCopyM;
     font-weight: bold;
     display: flex;
     width: 100%;
+
     @include tablet{
         @include bodyCopyDTBold;
-        font-size:1.2rem;
-        line-height: 1.125rem;
-        font-weight:bold;
-        display:flex;
-        width:52%;
-        justify-content: center
+        padding-left:5.5rem;
+        width:85%;
+        font-size: 1.1rem;
     }
+
+    @include desktop{
+        @include bodyCopyDTBold;
+        padding-left:11.8rem;
+        width:85%;
+        font-size: 1rem;
     }
-}
+  }
   &__aboutband-title {
     @include subHeaderM;
+
+    @include tablet{
+        @include sectionHeaderDT;
+        display: flex;
+        padding-left:5.5rem;
+        padding-top:2.25rem;
+        font-size: 1.8rem;
+    }
+    @include desktop{
+        @include sectionHeaderDT;
+        display: flex;
+        padding-left:11.8rem;
+        padding-top:2.25rem;
+        font-size:1.5rem;
+    }
+  }
+
+  &__aboutband-para{
+    @include tablet{
+        display: flex;
+        gap:6rem;
+        padding-left:5.625rem;
+        padding-right:5.625rem;
+        width:100%;
+        padding-bottom:0;
+        
+    }
+    @include desktop{
+        display: flex;
+        gap:3rem;
+        padding-left:11.8rem;
+        padding-right:11.8rem;
+        width:100%;
+        padding-bottom:0;
+    }
   }
   &__aboutband-paraone {
     @include bodyCopyM;
     padding-bottom: $padding-btwComponentsM;
     width: 96%;
+    @include tablet{
+        @include bodyCopyDTReg;
+        font-size:1.4rem;
+        line-height: 2.075rem;
+        font-weight: 400;
+        width:100%;
+    }
+    @include desktop{
+        @include bodyCopyDTReg;
+        font-size:1rem;
+        line-height: 1.575rem;
+        font-weight: 400;
+        width:109%;
+        padding-bottom:1rem;
+    }
   }
 
   &__aboutband-paratwo {
     @include bodyCopyM;
-    width: 96%;
+    width:96%;
+    @include tablet{
+        @include bodyCopyDTReg;
+        font-size:1.4rem;
+        line-height: 2.075rem;
+        font-weight: 400;
+        width: 97%;
+    }
+    @include desktop{
+        @include bodyCopyDTReg;
+        font-size:1rem;
+        line-height: 1.575rem;
+        font-weight: 400;
+        width:107%;
+        padding-bottom:1rem;
+    }
   }
 }
 
@@ -249,7 +379,13 @@
   @include tablet{
     padding-left: 3.125rem;
     padding-right:3.125rem;
-    padding-bottom:3.125rem
+    padding-bottom:3.125rem;
+  }
+  @include desktop{
+    padding-left: 6.25rem;
+    padding-right:6.25rem;
+    padding-bottom:3.125rem;
+    width:100%;
   }
 
   &__title {
@@ -257,6 +393,11 @@
     color: $primary-bandSiteBlack;
     @include tablet{
         @include pageHeaderDT;
+        font-size: 2.75rem;
+    }
+    @include desktop{
+        @include pageHeaderDT;
+        font-size: 2.6rem;
     }
   }
 
@@ -266,7 +407,16 @@
         grid-template-columns: repeat(3,1fr);
         gap:2.5rem;
     }
+}
+    @include desktop{
+        .photo-container__gallery{
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:2.5rem;
+    }
+
   }
+
   &__gallery-image {
     width: 100%;
     height: 29rem;
@@ -276,7 +426,13 @@
         height:100%;
         object-fit:cover;
     }
+    @include desktop{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
   }
+
 }
 
 .footer {
@@ -287,9 +443,27 @@
   padding-right: 1rem;
   width: 100%;
 
+  @include tablet{
+    padding-left:2.25rem;
+    padding-right:2.25rem;
+  }
+  @include desktop{
+    padding-left: 6.25rem;
+    padding-right:6.25rem;
+      }
+
   &__title {
     @include pageHeaderM;
     color: $primary-white;
+    position:relative;
+
+    @include tablet{
+        @include sectionHeaderDT;
+    }
+    @include desktop{
+        @include sectionHeaderDT;
+    }
+   
   }
 
   &__social {
@@ -297,28 +471,102 @@
     justify-content: flex-start;
     gap: 2.5rem;
     width: 50%;
+
+    @include tablet{
+        justify-content:flex-start;
+        margin-bottom:2rem;
+        position:absolute;
+        left:19rem;
+        top:222.5rem;
+    }
+    @include desktop{
+        justify-content:flex-start;
+        margin-bottom:2rem;
+        position:absolute;
+        left:22.5rem;
+        top:198rem;
+    }
   }
   &__banddetails {
     display: flex;
     flex-direction: column;
     padding-bottom: 2rem;
     @include footerCopyM;
+
+    @include tablet{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+        text-align: left;
+    }
+    @include desktop{
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 3.2rem;
+        text-align: left;
+        padding-right:38rem;
+    }
+
   }
 
   &__brand-img {
     @include logo-bandsite;
+
+    @include  tablet{
+        @include logo-bandsite;
+        position:absolute;
+        right:5rem;
+        top:215.5rem;
+      }
+
+      @include desktop{
+        @include logo-bandsite;
+        position:absolute;
+        right:6rem;
+        top:198rem;
+      }
   }
+
+
   &__banddetails-bandmgmt-title {
     @include footerCopyM;
     color: $primary-white;
+
+    @include tablet{
+        @include footerCopyDT;
+    }
+    @include desktop{
+        @include footerCopyDT;
+    }
   }
+
   &__banddetails-bandmgmt-contact {
     @include footerCopyM;
     color: $primary-white;
+
+    @include tablet{
+        @include footerCopyDT;
+    }
+
+    @include desktop{
+        @include footerCopyDT;
+    }
   }
 
   &__copyright {
     @include footerCopyM;
     color: $primary-white;
+
+    @include tablet{
+        text-align: left;
+        @include footerCopyDT;
+    }
+    @include desktop{
+        text-align: left;
+        @include footerCopyDT;
+    }
+
   }
+  
 }
+
