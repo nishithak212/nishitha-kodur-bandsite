@@ -430,7 +430,7 @@ body {
     line-height: 1.375rem;
     font-weight: 400;
     font-weight: 700;
-    font-size: 1.4rem;
+    font-size: 1.15rem;
     line-height: 2.075rem;
     font-weight: 400;
     width: 100%;
@@ -464,10 +464,10 @@ body {
     line-height: 1.375rem;
     font-weight: 400;
     font-weight: 700;
-    font-size: 1.4rem;
+    font-size: 1.15rem;
     line-height: 2.075rem;
     font-weight: 400;
-    width: 97%;
+    width: 100%;
   }
 }
 @media screen and (min-width: 1281px) {
@@ -576,8 +576,8 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .footer {
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
+    padding-left: 3.125rem;
+    padding-right: 3.125rem;
   }
 }
 @media screen and (min-width: 1281px) {
@@ -608,6 +608,7 @@ body {
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-weight: 700;
+    font-size: 1.8rem;
   }
 }
 .footer__social {
@@ -622,7 +623,7 @@ body {
     margin-bottom: 2rem;
     position: absolute;
     left: 19rem;
-    top: 222.5rem;
+    top: 197.8rem;
   }
 }
 @media screen and (min-width: 1281px) {
@@ -631,7 +632,7 @@ body {
     margin-bottom: 2rem;
     position: absolute;
     left: 22.5rem;
-    top: 198rem;
+    top: 194.15rem;
   }
 }
 .footer__banddetails {
@@ -645,9 +646,10 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .footer__banddetails {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 2rem;
     text-align: left;
+    padding-right: 31rem;
   }
 }
 @media screen and (min-width: 1281px) {
@@ -656,7 +658,7 @@ body {
     justify-content: space-evenly;
     gap: 3.2rem;
     text-align: left;
-    padding-right: 38rem;
+    padding-right: 28rem;
   }
 }
 .footer__brand-img {
@@ -668,8 +670,8 @@ body {
     height: 1.25rem;
     width: 7.5rem;
     position: absolute;
-    right: 5rem;
-    top: 215.5rem;
+    right: 3rem;
+    top: 197.8rem;
   }
 }
 @media screen and (min-width: 1281px) {
@@ -677,8 +679,8 @@ body {
     height: 1.25rem;
     width: 7.5rem;
     position: absolute;
-    right: 6rem;
-    top: 198rem;
+    right: 7rem;
+    top: 194.15rem;
   }
 }
 .footer__banddetails-bandmgmt-title {
@@ -701,6 +703,7 @@ body {
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 400;
+    font-weight: bolder;
   }
 }
 .footer__banddetails-bandmgmt-contact {

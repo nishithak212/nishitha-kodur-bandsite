@@ -320,6 +320,7 @@
         width:100%;
         padding-bottom:0;
         
+        
     }
     @include desktop{
         display: flex;
@@ -336,7 +337,7 @@
     width: 96%;
     @include tablet{
         @include bodyCopyDTReg;
-        font-size:1.4rem;
+        font-size:1.15rem;
         line-height: 2.075rem;
         font-weight: 400;
         width:100%;
@@ -356,10 +357,10 @@
     width:96%;
     @include tablet{
         @include bodyCopyDTReg;
-        font-size:1.4rem;
+        font-size:1.15rem;
         line-height: 2.075rem;
         font-weight: 400;
-        width: 97%;
+        width: 100%;
     }
     @include desktop{
         @include bodyCopyDTReg;
@@ -444,8 +445,8 @@
   width: 100%;
 
   @include tablet{
-    padding-left:2.25rem;
-    padding-right:2.25rem;
+    padding-left: 3.125rem;
+    padding-right:3.125rem;
   }
   @include desktop{
     padding-left: 6.25rem;
@@ -462,6 +463,7 @@
     }
     @include desktop{
         @include sectionHeaderDT;
+        font-size: 1.8rem;
     }
    
   }
@@ -477,14 +479,15 @@
         margin-bottom:2rem;
         position:absolute;
         left:19rem;
-        top:222.5rem;
+        top:197.8rem;
     }
     @include desktop{
         justify-content:flex-start;
         margin-bottom:2rem;
+        //position:absolute;
         position:absolute;
         left:22.5rem;
-        top:198rem;
+        top:194.15rem;
     }
   }
   &__banddetails {
@@ -495,16 +498,17 @@
 
     @include tablet{
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
         gap: 2rem;
         text-align: left;
+        padding-right: 31rem;
     }
     @include desktop{
         flex-direction: row;
         justify-content: space-evenly;
         gap: 3.2rem;
         text-align: left;
-        padding-right:38rem;
+        padding-right:28rem;
     }
 
   }
@@ -515,15 +519,15 @@
     @include  tablet{
         @include logo-bandsite;
         position:absolute;
-        right:5rem;
-        top:215.5rem;
+        right:3rem;
+        top:197.8rem;
       }
 
       @include desktop{
         @include logo-bandsite;
         position:absolute;
-        right:6rem;
-        top:198rem;
+        right:7rem;
+        top:194.15rem;
       }
   }
 
@@ -537,6 +541,7 @@
     }
     @include desktop{
         @include footerCopyDT;
+        font-weight: bolder;
     }
   }
 
