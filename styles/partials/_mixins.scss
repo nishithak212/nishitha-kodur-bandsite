@@ -1,0 +1,121 @@
+@use './variables' as *;
+@use './global' as *;
+@use './typography' as *;
+
+//Mixin for tablet
+@mixin tablet{
+   // @media screen and (min-width:$tablet-breakpointmin) and (max-width:$tablet-breakpointmax){
+    @media screen and (min-width:$tablet-breakpointmin){
+        @content;
+    }
+}
+
+//Mixin for desktop
+@mixin desktop{
+    @media screen and (min-width:$desktop-breakpoint){
+        @content;
+    }
+}
+
+//Mixin for BANDSITE logo
+@mixin logo-bandsite{
+    height: 1.25rem;
+    width: 7.5rem;
+}
+
+//Mixin for mobile text style
+
+@mixin pageHeaderM{
+    font-family: 'NunitoSans';
+    font-size: $fontSize-pageHeaderM;
+    line-height: $lineHeight-pageHeaderM;
+    font-weight:$fontWeight-pageHeaderM;
+}
+
+@mixin sectionHeaderM{
+    font-family: 'NunitoSans';
+    font-size: $fontSize-sectionHeaderM;
+    line-height: $lineHeight-sectionHeaderM;
+    font-weight:$fontWeight-sectionHeaderM;
+}
+
+@mixin bodyCopyM{
+    font-family:'NunitoSans';
+    font-size:$fontSize-bodyCopyM;
+    line-height: $lineHeight-bodyCopyM;
+    font-weight: $fontWeight-bodyCopyM;
+}
+
+@mixin subHeaderM{
+    font-family:'NunitoSans';
+    font-size:$fontSize-subHeaderM;
+    line-height: $lineHeight-subHeaderM;
+    font-weight: $fontWeight-subHeaderM;
+}
+
+@mixin footerCopyM{
+    font-family:'NunitoSans';
+    font-size: $fontSize-footerCopyM;
+    line-height:$lineHeight-footerCopyM;
+    $fontWeight-footerCopyM:400;
+}
+
+@mixin labelButtonsM{
+    font-family: 'NunitoSans';
+    font-size:$fontSize-labelsButtonsM;
+    font-weight:$lineHeight-labelsButtonsM;
+    font-weight:$fontWeight-labelsButtonsM;
+}
+
+//Mixin for tablet and desktop  text style
+
+@mixin pageHeaderDT{
+    font-family: 'NunitoSans';
+    font-size: $fontSize-pageHeaderDT;
+    line-height:$lineHeight-pageHeaderDT;
+    font-weight:$fontWeight-pageHeaderDT;
+}
+
+@mixin sectionHeaderDT{
+    font-family: 'NunitoSans';
+    font-size: $fontSize-sectionHeaderDT;
+    line-height: $lineHeight-sectionHeaderDT;
+    font-weight:$fontWeight-sectionHeaderDT;
+}
+
+@mixin bodyCopyDTReg{
+    font-family:'NunitoSans';
+    font-size:$fontSize-bodyCopyDT;
+    line-height: $lineHeight-bodyCopyDT;
+    font-weight: $fontWeight-bodyCopyRegDT;
+    font-weight:$fontWeight-bodyCopyBoldDT;
+}
+
+@mixin bodyCopyDTBold{
+    font-family:'NunitoSans';
+    font-size:$fontSize-bodyCopyDT;
+    line-height: $lineHeight-bodyCopyDT;
+    font-weight:$fontWeight-bodyCopyBoldDT;
+}
+
+
+@mixin subHeaderDT{
+    font-family:'NunitoSans';
+    font-size:$fontSize-subHeaderDT;
+    line-height: $lineHeight-subHeaderDT;
+    font-weight: $fontWeight-subHeaderDT;
+}
+
+@mixin footerCopyDT{
+    font-family:'NunitoSans';
+    font-size: $fontSize-footerCopyDT;
+    line-height:$lineHeight-footerCopyDT;
+    font-weight:$fontWeight-footerCopyRegDT;
+}
+
+@mixin labelButtonsDT{
+    font-family: 'NunitoSans';
+    font-size:$fontSize-labelsButtonsDT;
+    font-weight:$lineHeight-labelsButtonsDT;
+    font-weight:$fontWeight-labelsButtonsDT;
+}

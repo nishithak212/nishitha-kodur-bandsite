@@ -1,0 +1,78 @@
+//Colors
+$primary-bandSiteBlack:#323232;
+$primary-silver: #AFAFAF;
+$primary-white: #FFFFFF;
+
+$secondary-bandSiteBlack: #000000;
+$secondary-mercury:  #E1E1E1;
+$secondary-alabaster:  #FAFAFA;
+
+//Breakpoints
+$mobile-breakpoint:320px;
+$tablet-breakpointmin:768px;
+$tablet-breakpointmax:1279px;
+$desktop-breakpoint:1280px;
+
+
+//Mobile padding
+$padding-bheadinesM:1.5rem;
+$padding-aheadlinesM:1rem;
+$padding-btwComponentsM:1rem;
+
+//Mobile Text Styles
+$fontSize-pageHeaderM : 1.5rem;
+$lineHeight-pageHeaderM:2rem;
+$fontWeight-pageHeaderM:700;
+
+$fontSize-sectionHeaderM:1.5rem;
+$lineHeight-sectionHeaderM:2rem;
+$fontWeight-sectionHeaderM: 700;
+
+$fontSize-subHeaderM:.875rem;
+$lineHeight-subHeaderM:1.375rem;
+$fontWeight-subHeaderM:600;
+
+$fontSize-bodyCopyM:.8125rem;
+$lineHeight-bodyCopyM:1.125rem;
+$fontWeight-bodyCopyM: 400;
+
+$fontSize-footerCopyM:.8125rem;
+$lineHeight-footerCopyM:1.125rem;
+$fontWeight-footerCopyM:400;
+
+$fontSize-labelsButtonsM:.625rem;
+$lineHeight-labelsButtonsM:1.25rem;
+$fontWeight-labelsButtonsM:700;
+
+//Desktop and tablet padding
+$padding-bheadinesDT:3rem;
+$padding-aheadlinesDT:2.25rem;
+$padding-btwComponentsDT:2.25rem;
+
+//Desktop and Tablet Text Styles
+$fontSize-pageHeaderDT : 3.75rem;
+$lineHeight-pageHeaderDT:4.25rem;
+$fontWeight-pageHeaderDT:700;
+
+$fontSize-sectionHeaderDT:2.25rem;
+$lineHeight-sectionHeaderDT:2.75rem;
+$fontWeight-sectionHeaderDT: 700;
+
+$fontSize-subHeaderDT:1.5rem;
+$lineHeight-subHeaderDT:2rem;
+$fontWeight-subHeaderDT:500;
+
+$fontSize-bodyCopyDT:.875rem;
+$lineHeight-bodyCopyDT:1.375rem;
+$fontWeight-bodyCopyRegDT:400;
+$fontWeight-bodyCopyBoldDT: 700;
+
+$fontSize-footerCopyDT:.875rem;
+$lineHeight-footerCopyDT:1.25rem;
+$fontWeight-footerCopyRegDT:400;
+$fontWeight-footerCopyBoldDT: 400;
+
+$fontSize-labelsButtonsDT:.75rem;
+$lineHeight-labelsButtonsDT:1.25rem;
+$fontWeight-labelsButtonsDT:700;
+
