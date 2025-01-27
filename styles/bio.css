@@ -611,25 +611,6 @@ body {
   gap: 1.5rem;
   justify-content: flex-start;
   margin-bottom: 1rem;
-  /*
-      @include tablet {
-        justify-content: center;
-        align-items: center;
-        width: 52%;
-        position: relative;
-        top: -3.29rem;
-      }
-  */
-  /*
-    @include desktop {
-      justify-content: center;
-      align-items: center;
-      width: 60%;
-      position: relative;
-      top: -3.29rem;
-
-  }
-      */
 }
 @media screen and (min-width: 768px) {
   .footer__social {
@@ -693,21 +674,6 @@ body {
   gap: 1.5rem;
   justify-content: flex-start;
   margin-bottom: 1rem;
-  /*   @include tablet{
-       justify-content: flex-end;
-       position: absolute;
-       right: 3rem;
-       top: 198rem;
-     }
-       */
-  /*
-        @include desktop{
-          justify-content: flex-end;
-          position: absolute;
-          right: 6rem;
-          top: 193.9rem;
-      }
-  */
 }
 @media screen and (min-width: 768px) {
   .footer__brand-img {

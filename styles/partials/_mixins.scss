@@ -4,7 +4,6 @@
 
 //Mixin for tablet
 @mixin tablet{
-   // @media screen and (min-width:$tablet-breakpointmin) and (max-width:$tablet-breakpointmax){
     @media screen and (min-width:$tablet-breakpointmin){
         @content;
     }

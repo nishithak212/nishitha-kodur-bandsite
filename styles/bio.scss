@@ -467,25 +467,7 @@
       gap: 1.5rem;
       justify-content: flex-start;
       margin-bottom: 1rem;
-  /*
-      @include tablet {
-        justify-content: center;
-        align-items: center;
-        width: 52%;
-        position: relative;
-        top: -3.29rem;
-      }
-  */
-      /*
-      @include desktop {
-        justify-content: center;
-        align-items: center;
-        width: 60%;
-        position: relative;
-        top: -3.29rem;
-
-    }
-        */
+      
         @include tablet {
           justify-content: center;
           align-items: center;
@@ -538,22 +520,6 @@
       gap: 1.5rem;
       justify-content: flex-start;
       margin-bottom: 1rem;
-
-   /*   @include tablet{
-        justify-content: flex-end;
-        position: absolute;
-        right: 3rem;
-        top: 198rem;
-      }
-        */
-/*
-      @include desktop{
-        justify-content: flex-end;
-        position: absolute;
-        right: 6rem;
-        top: 193.9rem;
-    }
-*/
 
 @include tablet{
   justify-content: flex-end;
