@@ -570,6 +570,7 @@ body {
   background-color: #323232;
   padding: 1.5rem 1rem;
   width: 100%;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   .footer {
@@ -610,14 +611,34 @@ body {
   gap: 1.5rem;
   justify-content: flex-start;
   margin-bottom: 1rem;
+  /*
+      @include tablet {
+        justify-content: center;
+        align-items: center;
+        width: 52%;
+        position: relative;
+        top: -3.29rem;
+      }
+  */
+  /*
+    @include desktop {
+      justify-content: center;
+      align-items: center;
+      width: 60%;
+      position: relative;
+      top: -3.29rem;
+
+  }
+      */
 }
 @media screen and (min-width: 768px) {
   .footer__social {
     justify-content: center;
     align-items: center;
-    width: 52%;
-    position: relative;
-    top: -3.29rem;
+    width: 60%;
+    position: absolute;
+    right: 42%;
+    top: 17%;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -625,8 +646,9 @@ body {
     justify-content: center;
     align-items: center;
     width: 60%;
-    position: relative;
-    top: -3.29rem;
+    position: absolute;
+    top: 19%;
+    left: 1%;
   }
 }
 .footer__banddetails {
@@ -671,21 +693,36 @@ body {
   gap: 1.5rem;
   justify-content: flex-start;
   margin-bottom: 1rem;
+  /*   @include tablet{
+       justify-content: flex-end;
+       position: absolute;
+       right: 3rem;
+       top: 198rem;
+     }
+       */
+  /*
+        @include desktop{
+          justify-content: flex-end;
+          position: absolute;
+          right: 6rem;
+          top: 193.9rem;
+      }
+  */
 }
 @media screen and (min-width: 768px) {
   .footer__brand-img {
     justify-content: flex-end;
     position: absolute;
-    right: 3rem;
-    top: 198rem;
+    right: 4%;
+    top: 15%;
   }
 }
 @media screen and (min-width: 1280px) {
   .footer__brand-img {
     justify-content: flex-end;
     position: absolute;
-    right: 6rem;
-    top: 193.9rem;
+    top: 16%;
+    right: 8%;
   }
 }
 .footer__brand-img-logo {

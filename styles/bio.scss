@@ -439,6 +439,7 @@
     background-color: $primary-bandSiteBlack;
     padding: 1.5rem 1rem;
     width: 100%;
+    position:relative;//
   
     @include tablet {
       padding: 2rem 3rem;
@@ -466,7 +467,7 @@
       gap: 1.5rem;
       justify-content: flex-start;
       margin-bottom: 1rem;
-  
+  /*
       @include tablet {
         justify-content: center;
         align-items: center;
@@ -474,6 +475,8 @@
         position: relative;
         top: -3.29rem;
       }
+  */
+      /*
       @include desktop {
         justify-content: center;
         align-items: center;
@@ -482,6 +485,25 @@
         top: -3.29rem;
 
     }
+        */
+        @include tablet {
+          justify-content: center;
+          align-items: center;
+          width: 60%;
+          position: absolute;
+          right: 42%;
+          top: 17%;
+        }
+
+        @include desktop {
+          justify-content: center;
+          align-items: center;
+          width: 60%;
+          position: absolute;
+          top: 19%;
+          left:1%;
+  
+      } 
 }
   
     &__banddetails {
@@ -517,19 +539,36 @@
       justify-content: flex-start;
       margin-bottom: 1rem;
 
-      @include tablet{
+   /*   @include tablet{
         justify-content: flex-end;
         position: absolute;
         right: 3rem;
         top: 198rem;
       }
-
+        */
+/*
       @include desktop{
         justify-content: flex-end;
         position: absolute;
         right: 6rem;
         top: 193.9rem;
     }
+*/
+
+@include tablet{
+  justify-content: flex-end;
+  position: absolute;
+  right: 4%;
+  top: 15%;
+}
+@include desktop{
+  justify-content: flex-end;
+  position: absolute;
+  top: 16%;
+  right: 8%;
+  
+}
+
       }
 
       &__brand-img-logo{
