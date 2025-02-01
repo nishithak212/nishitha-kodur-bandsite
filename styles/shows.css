@@ -168,7 +168,7 @@ body {
   background-size: cover;
   position: relative;
   overflow: hidden;
-  height: 36rem;
+  height: 40rem;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-start;
@@ -212,8 +212,8 @@ body {
   line-height: 4rem;
   width: 70%;
 }
-.hero__music {
-  position: absolute;
+.hero__music-track {
+  position: relative;
   font-size: 10px;
   color: #cccccc;
   line-break: anywhere;
@@ -227,6 +227,11 @@ body {
   font-weight: 400;
   color: #cccccc;
   text-decoration: none;
+  width: 45rem;
+  height: 19rem;
+  top: 50%;
+  margin-top: 2rem;
+  border-radius: 1rem;
 }
 
 #shows-container {
