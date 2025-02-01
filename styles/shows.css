@@ -168,12 +168,17 @@ body {
   background-size: cover;
   position: relative;
   overflow: hidden;
-  height: 40rem;
+  height: 49rem;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-start;
   width: 100%;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 54rem;
+  }
 }
 .hero__overlay-color {
   content: "";
@@ -201,6 +206,16 @@ body {
   font-weight: 300;
   margin-top: 2rem;
 }
+@media screen and (min-width: 768px) {
+  .hero__banner-title, .hero__banner__banner-title {
+    padding-left: 2.25rem;
+    margin-top: 6.5rem;
+    font-family: "NunitoSans";
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+  }
+}
 .hero__banner-album {
   font-family: "NunitoSans";
   font-size: 1.5rem;
@@ -211,6 +226,17 @@ body {
   font-size: 3.2rem;
   line-height: 4rem;
   width: 70%;
+}
+@media screen and (min-width: 768px) {
+  .hero__banner-album {
+    padding-left: 2.25rem;
+    font-family: "NunitoSans";
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 5.5rem;
+  }
 }
 .hero__music-track {
   position: relative;
@@ -233,10 +259,21 @@ body {
   margin-top: 2rem;
   border-radius: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .hero__music-track {
+    margin-left: 2.25rem;
+  }
+}
 
 #shows-container {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+@media screen and (min-width: 768px) {
+  #shows-container {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
 }
 #shows-container__title, #shows-container h2 {
   font-family: "NunitoSans";
@@ -248,6 +285,15 @@ body {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+@media screen and (min-width: 768px) {
+  #shows-container__title, #shows-container h2 {
+    font-family: "NunitoSans";
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    font-size: 4.25rem;
+  }
+}
 #shows-container div {
   font-family: "NunitoSans";
   font-size: 0.8125rem;
@@ -255,6 +301,13 @@ body {
   font-weight: 400;
   padding: 1rem;
   border-bottom: 0.0625rem solid #E1E1E1;
+}
+@media screen and (min-width: 768px) {
+  #shows-container div {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+  }
 }
 #shows-container div:hover {
   background-color: #FAFAFA;
@@ -272,6 +325,15 @@ body {
   font-size: 1.2rem;
   font-weight: 600;
 }
+@media screen and (min-width: 768px) {
+  #shows-container div .div__date {
+    font-family: "NunitoSans";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-weight: 700;
+  }
+}
 #shows-container div .div__date--bold {
   color: #323232;
   font-family: "NunitoSans";
@@ -280,6 +342,14 @@ body {
   font-weight: 400;
   font-size: 1.2rem;
   font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  #shows-container div .div__date--bold {
+    font-family: "NunitoSans";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 700;
+  }
 }
 #shows-container div .div__venue {
   font-weight: 600;
@@ -291,6 +361,15 @@ body {
   font-size: 1.2rem;
   font-weight: 600;
 }
+@media screen and (min-width: 768px) {
+  #shows-container div .div__venue {
+    font-family: "NunitoSans";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-weight: 700;
+  }
+}
 #shows-container div .div__venue--bold {
   font-weight: bold;
   color: #323232;
@@ -299,6 +378,15 @@ body {
   line-height: 1.125rem;
   font-weight: 400;
   font-size: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  #shows-container div .div__venue--bold {
+    font-family: "NunitoSans";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-weight: 700;
+  }
 }
 #shows-container div .div__location {
   font-weight: 600;
@@ -310,6 +398,15 @@ body {
   font-size: 1.2rem;
   font-weight: 600;
 }
+@media screen and (min-width: 768px) {
+  #shows-container div .div__location {
+    font-family: "NunitoSans";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-weight: 700;
+  }
+}
 #shows-container div .div__location--bold {
   font-weight: bold;
   color: #323232;
@@ -318,6 +415,15 @@ body {
   line-height: 1.125rem;
   font-weight: 400;
   font-size: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  #shows-container div .div__location--bold {
+    font-family: "NunitoSans";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-weight: 700;
+  }
 }
 #shows-container .buy-ticket {
   text-decoration: none;
@@ -336,6 +442,11 @@ body {
   font-weight: 1.25rem;
   font-weight: 700;
   font-size: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  #shows-container .buy-ticket {
+    width: 12.9581rem;
+  }
 }
 
 .footer {

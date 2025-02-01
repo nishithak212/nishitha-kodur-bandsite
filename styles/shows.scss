@@ -140,21 +140,17 @@
         background-size: cover;
         position: relative;
         overflow: hidden;
-        height: 40rem;
+        height: 49rem;
         flex-direction: column;
         flex-wrap: wrap;
         align-content: flex-start;
         width: 100%;
         position: relative;
+
+        @include tablet{
+            height:54rem;
+        }
       
-        // @include tablet{
-        //   height:40rem;
-        // }
-      
-        // @include desktop{
-        //   height:46rem;
-        //   width:100%;
-        // }
       
         &__overlay-color {
           content: "";
@@ -180,15 +176,13 @@
             position: relative;
             font-weight: 300;
             margin-top:2rem;
-            // @include tablet{
-            //   @include pageHeaderDT;
-            // }
-            // @include desktop{
-            //   padding-left:7rem;
-            //   padding-bottom:8rem;
-            //   @include pageHeaderDT;
-            //   font-size:3.4rem;
-            // }
+
+            @include tablet{
+                padding-left:2.25rem;
+                margin-top:6.5rem;
+                @include sectionHeaderDT;
+            }
+            
           }
 
         }
@@ -199,6 +193,13 @@
     font-size: 3.2rem;
     line-height: 4rem;
     width:70%;
+
+    @include tablet{
+        padding-left:2.25rem;
+        @include pageHeaderDT;
+        font-size:5rem;
+        line-height: 5.5rem;
+    }
 }
         &__music-track{
             position: relative;
@@ -217,6 +218,11 @@
             top:50%;
             margin-top: 2rem;
             border-radius: 1rem;
+
+            @include tablet{
+                margin-left:2.25rem;
+            }
+
         }
       }
 
@@ -224,6 +230,11 @@
       #shows-container{
         padding-left: 1rem;
         padding-right: 1rem;
+
+        @include tablet{
+            padding-left:2.25rem;
+            padding-right:2.25rem;
+        }
       
         &__title, h2{
             @include sectionHeaderM;
@@ -231,6 +242,11 @@
             font-size:2.5rem;
             padding-left: 1rem;
         padding-right: 1rem;
+
+        @include tablet{
+            @include sectionHeaderDT;
+            font-size:4.25rem;
+        }
             
         }
 
@@ -238,6 +254,12 @@
         @include bodyCopyM;
         padding:1rem;
         border-bottom: .0625rem solid $secondary-mercury;
+
+        @include tablet{
+            display:flex;
+            justify-content: space-between;
+            text-align: left;
+        }
 
         &:hover{
             background-color: $secondary-alabaster;
@@ -253,13 +275,19 @@
             @include bodyCopyM;
             font-size: 1.2rem;
             font-weight: 600;
-
+            @include tablet{
+                @include bodyCopyDTReg;
+            }
             &--bold{
                 color:$primary-bandSiteBlack;
                 @include bodyCopyM;
                 font-size:1.2rem;
                 font-weight: bold;
+                @include tablet{
+                    @include bodyCopyDTBold;
+                }
             }
+            
        }
 
        .div__venue{
@@ -268,11 +296,17 @@
         @include bodyCopyM;
         font-size: 1.2rem;
         font-weight: 600;
+        @include tablet{
+            @include bodyCopyDTReg;
+        }
         &--bold{
             font-weight: bold;
             color:$primary-bandSiteBlack;
             @include bodyCopyM;
             font-size:1.2rem;
+            @include tablet{
+                @include bodyCopyDTReg;
+            }
         }
    }
 
@@ -282,11 +316,17 @@
     @include bodyCopyM;
     font-size: 1.2rem;
     font-weight: 600;
+    @include tablet{
+        @include bodyCopyDTReg;
+    }
     &--bold{
         font-weight: bold;
         color:$primary-bandSiteBlack;
         @include bodyCopyM;
         font-size:1.2rem;
+        @include tablet{
+            @include bodyCopyDTReg;
+        }
     }
 }
 
@@ -306,6 +346,10 @@
             flex-direction: column;
             @include labelButtonsM;
             font-size:1.2rem;
+
+            @include tablet{
+                width:12.9581rem;
+            }
 
         }
 
