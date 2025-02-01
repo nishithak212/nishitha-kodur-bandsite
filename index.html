@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BandSite</title>
     <link href="./styles/bio.css" rel="stylesheet">
+    <script src="./scripts/index-page.js" defer></script>
 </head>
 <body>
     <main>
@@ -18,7 +19,7 @@
           <a href="./index.html" class="header__navbar-list-item-active">Biography</a>
         </li>
         <li class="header__navbar-list-item">
-          <a href="./shows.html">Shows</a>
+          <a href="./pages/shows.html">Shows</a>
         </li>
       </ul>
     </nav>
@@ -60,6 +61,19 @@
                 <img class="photo-container__gallery-image" src="./assets/Images/Photo-gallery-6.jpg" alt="concert">
             </section>
         </article>
+        <section class="comments">
+            <h2 class="comments__title">Join the Conversation</h2>
+            <form id="comments__form">
+                <img class="comments__dp" src="./assets/Images/Mohan-muruge.jpg" alt="profile-picture">
+                <label for="Name" class="comments__label">Name</label>
+                <input class="comments__content" type="text" name="Name" placeholder="Enter your name">
+                <label for="Comment" class="comments__label">COMMENT</label>
+                <textarea name="Comment" class="comments__content" placeholder="Add a new comment"></textarea>
+                <button type="submit">COMMENT</button>
+            </form>
+<!-- Default and dynamic comments to be added to the list -->
+            <ul id="comments__list"></ul>
+        </section>
         <footer class="footer">
             <h1 class="footer__title">Get in Touch</h1>
             <div class="footer__social">
@@ -87,7 +101,6 @@
 <div class="footer__brand-img">
         <a href="./index.html"><img class="footer__brand-img-logo" src="./assets/Logo/Logo-bandsite.svg" alt="BandSite-Logo"></a>
     </div>
-        <!-- <a href="./index.html"><img class="footer__brand-img" src="./assets/Logo/Logo-bandsite.svg" alt="BandSite-Logo"></a> -->
         <p class="footer__copyright">Copyright The Bees Knees © 2023 All Rights Reserved</p>
         </footer>
 
