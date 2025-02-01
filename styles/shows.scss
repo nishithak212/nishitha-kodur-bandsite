@@ -151,6 +151,9 @@
             height:54rem;
         }
       
+        @include desktop{
+            height:46rem;
+        }
       
         &__overlay-color {
           content: "";
@@ -183,6 +186,10 @@
                 @include sectionHeaderDT;
             }
             
+            @include desktop{
+                padding-left:8rem;
+                margin-bottom: 0;
+            }
           }
 
         }
@@ -199,6 +206,12 @@
         @include pageHeaderDT;
         font-size:5rem;
         line-height: 5.5rem;
+    }
+
+    @include desktop{
+        width:50%;
+        font-size: 3.8rem;
+        padding-left: 8rem;
     }
 }
         &__music-track{
@@ -223,8 +236,16 @@
                 margin-left:2.25rem;
             }
 
+            @include desktop{
+                margin-left: 2.25rem;
+                right: -129%;
+                top: -1%;
+                width: 86%;
+                height: 63%;
+            }
         }
-      }
+            }
+    
 
 
       #shows-container{

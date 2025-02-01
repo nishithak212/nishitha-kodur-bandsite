@@ -180,6 +180,11 @@ body {
     height: 54rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: 46rem;
+  }
+}
 .hero__overlay-color {
   content: "";
   position: absolute;
@@ -216,6 +221,12 @@ body {
     font-weight: 700;
   }
 }
+@media screen and (min-width: 1280px) {
+  .hero__banner-title, .hero__banner__banner-title {
+    padding-left: 8rem;
+    margin-bottom: 0;
+  }
+}
 .hero__banner-album {
   font-family: "NunitoSans";
   font-size: 1.5rem;
@@ -236,6 +247,13 @@ body {
     font-weight: 700;
     font-size: 5rem;
     line-height: 5.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__banner-album {
+    width: 50%;
+    font-size: 3.8rem;
+    padding-left: 8rem;
   }
 }
 .hero__music-track {
@@ -262,6 +280,15 @@ body {
 @media screen and (min-width: 768px) {
   .hero__music-track {
     margin-left: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__music-track {
+    margin-left: 2.25rem;
+    right: -129%;
+    top: -1%;
+    width: 86%;
+    height: 63%;
   }
 }
 
