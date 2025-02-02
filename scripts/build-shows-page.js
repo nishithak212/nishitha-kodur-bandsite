@@ -7,6 +7,7 @@ const shows = [
     { date: "Wed Dec 18 2024", venue: "Press Club", location: "San Fransico, CA" },
 ];
 
+
 function table(arr) {
 
     const showContainer = document.querySelector(".shows-container__details");
@@ -23,7 +24,6 @@ function table(arr) {
     showsCont.classList.add("shows-container__all");
     showContainer.appendChild(showsCont);
 
-    //
     const headerCont = document.createElement("div");
     headerCont.classList.add("shows-container__header-cont");
     showsCont.appendChild(headerCont);
@@ -95,6 +95,16 @@ function table(arr) {
         button.classList.add("shows-container__table-cont--button");
         buttonCont.appendChild(button);
         button.innerText = "BUY TICKETS";
+
+        //Click event for selected row
+
+        tableCont.addEventListener("click",()=>{
+           document
+           .querySelectorAll(".shows-container__table-cont")
+            .forEach(row=> row.classList.remove("shows-container__table-cont--selected"));
+            tableCont.classList.add("shows-container__table-cont--selected");
+           // console.log("row is clicked:", tableCont);
+        });
     }
 
 }

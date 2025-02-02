@@ -246,6 +246,12 @@
 }
 
 .shows-container {
+
+    @include desktop{
+        margin-left:12.5rem;
+        margin-right:12.5rem;
+        padding-bottom:2.25rem
+    }
   h1 {
     @include desktop {
       @include sectionHeaderDT;
@@ -303,12 +309,12 @@
       border-bottom: 0.0625rem solid $primary-silver;
       &:hover{
         background-color: $secondary-alabaster;
-        cursor:all-scroll;
+        cursor:pointer;
       }
 
-      &:active{
+      &--selected{
         background-color: $secondary-mercury;
-      }
+    }
     }
     @include desktop {
       display: flex;
@@ -323,9 +329,9 @@
         cursor: pointer;
       }
 
-      &:active{
+      &--selected{
         background-color: $secondary-mercury;
-      }
+    }
     }
     &--date-label {
       @include bodyCopyM;
@@ -408,6 +414,7 @@
       @include desktop {
         display: none;
         margin: 0;
+        
       }
     }
 
@@ -424,6 +431,7 @@
       @include desktop {
         text-align: left;
         margin: 0;
+        width:12rem;
       }
     }
 
@@ -460,55 +468,69 @@
         margin-right: 1rem;
       }
     }
+    
+}
+
   }
-  @include tablet {
-    &__header-cont {
+
+  
+    .shows-container{
+        &__header-cont {
+
+        @include tablet {
       display: flex;
       justify-content: space-evenly;
       @include bodyCopyDTBold;
       color: $primary-silver;
+        }
       @include desktop {
         display: flex;
         justify-content: space-between;
       }
     }
     &__header--date {
+        @include tablet{
       // align-self:center;
       margin: 0;
       flex: 1.2;
       text-align: left;
+        }
       @include desktop {
         margin: 0;
       }
     }
     &__header--venue {
+        @include tablet{
       // align-self:center;
       margin: 0;
       flex: 1.2;
       text-align: left;
+        }
       @include desktop {
         margin: 0;
       }
     }
     &__header--location {
+        @include tablet{
       // align-self:center;
       margin: 0;
       flex: 1.4;
       text-align: left;
+        }
       @include desktop {
         margin: 0;
       }
     }
     &__header--button-head {
+        @include tablet{
       visibility: hidden;
       flex: 0.3;
       text-align: right;
-      @include desktop {
-        //  visibility: hidden;
-      }
+      
     }
   }
 }
+
 
 .footer {
   background-color: $primary-bandSiteBlack;
