@@ -1,28 +1,103 @@
-//1. Referencing the section container
-
-const showsList=document.getElementById('shows-container');
-
-//2. Array for listing show details
 const shows = [
-    {DATE: "Mon Sept 09 2024", VENUE:"Ronald Lane", LOCATION:"San Fransico, CA", ticketLink:"#" },
-    {DATE: "Tue Sept 17 2024", VENUE:"Pier 3 East", LOCATION:"San Fransico, CA", ticketLink:"#" },
-    {DATE: "Sat Oct 12 2024", VENUE:"View Lounge", LOCATION:"San Fransico, CA", ticketLink:"#" },
-    {DATE: "Sat Nov 16 2024", VENUE:"Hyatt Agency", LOCATION:"San Fransico, CA", ticketLink:"#" },
-    {DATE: "Fri Nov 29 2024", VENUE:"Moscow Center", LOCATION:"San Fransico, CA", ticketLink:"#" },
-    {DATE: "Wed Dec 18 2024", VENUE:"Press Club", LOCATION:"San Fransico, CA", ticketLink:"#" },
+    {date: "Mon Sept 09 2024", venue:"Ronald Lane", location:"San Fransico, CA" },
+    {date: "Tue Sept 17 2024", venue:"Pier 3 East", location:"San Fransico, CA" },
+    {date: "Sat Oct 12 2024", venue:"View Lounge", location:"San Fransico, CA"},
+    {date: "Sat Nov 16 2024", venue:"Hyatt Agency", location:"San Fransico, CA"},
+    {date: "Fri Nov 29 2024", venue:"Moscow Center", location:"San Fransico, CA"},
+    {date: "Wed Dec 18 2024", venue:"Press Club", location:"San Fransico, CA"},
 ];
 
-//3. Loop through array to create show elements
+function table(arr){
 
-shows.forEach(show =>{
-    const showDiv=document.createElement('div');
-    showDiv.classList.add('show');
+    const showContainer = document.querySelector(".shows-container__details");
+    const showContainerTitle= document.createElement("div");
+    showContainerTitle.classList.add("shows-container__title");
+    showContainer.appendChild(showContainerTitle);
 
-    showDiv.innerHTML=`
-    <p class="div__date">DATE <br> <span class="div__date--bold"> ${show.DATE}</span></p>
-    <h4 class="div__venue">VENUE <br><span class="div__venue--bold">${show.VENUE}</span></h4>
-    <p class="div__location">LOCATION <br><span class="div__location--bold"> ${show.LOCATION}</span></p>
-    <a href="${show.ticketLink}" class="buy-ticket">Buy Tickets</a>
-    `;
-    showsList.appendChild(showDiv);
-});
+    const title = document.createElement("h1");
+    title.classList.add("shows__title");
+    showContainerTitle.appendChild(title);
+    title.innerText="Shows";
+
+    const showsCont = document.createElement("div");
+    showsCont.classList.add("shows-container__all");
+    showContainer.appendChild(showsCont);
+
+    //
+    const headerCont=document.createElement("div");
+    headerCont.classList.add("shows-container__header-cont");
+    showsCont.appendChild(headerCont);
+
+    const dateHead=document.createElement("h3");
+    dateHead.classList.add("shows-container__header--date");
+    headerCont.appendChild(dateHead);
+    dateHead.innerText="DATES";
+
+    const venueHead=document.createElement("h3");
+    venueHead.classList.add("shows-container__header--venue");
+    headerCont.appendChild(venueHead);
+    venueHead.innerText="VENUE";
+
+    const locationHead=document.createElement("h3");
+    locationHead.classList.add("shows-container__header--location");
+    headerCont.appendChild(locationHead);
+    locationHead.innerText="LOCATION";
+
+    const buttonHead=document.createElement("button");
+    buttonHead.classList.add("shows-container__header--button-head");
+    headerCont.appendChild(buttonHead);
+    buttonHead.innerText="BUY TICKETS";
+
+
+    for(let i=0; i<shows.length ; i++)
+    {
+        const tableCont=document.createElement("div");
+        tableCont.classList.add("shows-container__table-cont");
+        showsCont.appendChild(tableCont);
+
+        const dateLabel = document.createElement("h3");
+        dateLabel.classList.add("shows-container__table-cont--date-label");
+        tableCont.appendChild(dateLabel);
+        dateLabel.innerText="DATE";
+
+
+        const date=document.createElement("h4");
+        date.classList.add("shows-container__table-cont--date");
+        tableCont.appendChild(date);
+        date.innerText=arr[i]["date"];
+
+        const venueLabel = document.createElement("h3");
+        venueLabel.classList.add("shows-container__table-cont--venue-label");
+        tableCont.appendChild(venueLabel);
+        venueLabel.innerText="VENUE";
+
+
+        const venue=document.createElement("h4");
+        venue.classList.add("shows-container__table-cont--venue");
+        tableCont.appendChild(venue);
+        venue.innerText=arr[i]["venue"];
+
+        const locationLabel = document.createElement("h3");
+        locationLabel.classList.add("shows-container__table-cont--location-label");
+        tableCont.appendChild(locationLabel);
+        locationLabel.innerText="LOCATION";
+
+
+        const location=document.createElement("h4");
+        location.classList.add("shows-container__table-cont--location");
+        tableCont.appendChild(location);
+        location.innerText=arr[i]["location"];
+
+        const buttonCont=document.createElement("div");
+        buttonCont.classList.add("shows-container__table-cont--button-cont");
+        tableCont.appendChild(buttonCont);
+
+        const button=document.createElement("button");
+        button.classList.add("shows-container__table-cont--button");
+        buttonCont.appendChild(button);
+        button.innerText="BUY TICKETS";
+    }
+
+}
+
+table(shows);

@@ -168,7 +168,7 @@ body {
   background-size: cover;
   position: relative;
   overflow: hidden;
-  height: 49rem;
+  height: 35rem;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-start;
@@ -271,10 +271,11 @@ body {
   font-weight: 400;
   color: #cccccc;
   text-decoration: none;
-  width: 45rem;
-  height: 19rem;
-  top: 50%;
-  margin-top: 2rem;
+  width: 43rem;
+  height: 10rem;
+  top: 40%;
+  margin-left: 1rem;
+  margin-top: 14rem;
   border-radius: 1rem;
 }
 @media screen and (min-width: 768px) {
@@ -292,188 +293,89 @@ body {
   }
 }
 
-#shows-container {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.shows-container {
+  padding: 1rem;
+  margin: 1rem;
 }
-@media screen and (min-width: 768px) {
-  #shows-container {
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
-  }
-}
-#shows-container__title, #shows-container h2 {
+.shows-container__title {
   font-family: "NunitoSans";
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
-  padding-top: 2rem;
-  font-size: 2.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-bottom: 0.1875rem;
 }
-@media screen and (min-width: 768px) {
-  #shows-container__title, #shows-container h2 {
-    font-family: "NunitoSans";
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-    font-weight: 700;
-    font-size: 4.25rem;
-  }
+.shows-container__header-cont {
+  display: none;
 }
-#shows-container div {
+.shows-container__table-cont--date-label {
   font-family: "NunitoSans";
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
-  padding: 1rem;
-  border-bottom: 0.0625rem solid #E1E1E1;
-}
-@media screen and (min-width: 768px) {
-  #shows-container div {
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
-  }
-}
-#shows-container div:hover {
-  background-color: #FAFAFA;
-}
-#shows-container div:active {
-  background-color: #E1E1E1;
-}
-#shows-container div .div__date {
-  font-weight: 600;
   color: #AFAFAF;
-  font-family: "NunitoSans";
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-@media screen and (min-width: 768px) {
-  #shows-container div .div__date {
-    font-family: "NunitoSans";
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    font-weight: 400;
-    font-weight: 700;
-  }
-}
-#shows-container div .div__date--bold {
-  color: #323232;
-  font-family: "NunitoSans";
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-  font-size: 1.2rem;
   font-weight: bold;
+  font-size: 1.25rem;
 }
-@media screen and (min-width: 768px) {
-  #shows-container div .div__date--bold {
-    font-family: "NunitoSans";
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    font-weight: 700;
-  }
-}
-#shows-container div .div__venue {
-  font-weight: 600;
-  color: #AFAFAF;
+.shows-container__table-cont--date {
   font-family: "NunitoSans";
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-@media screen and (min-width: 768px) {
-  #shows-container div .div__venue {
-    font-family: "NunitoSans";
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    font-weight: 400;
-    font-weight: 700;
-  }
-}
-#shows-container div .div__venue--bold {
   font-weight: bold;
   color: #323232;
+  font-size: 1.25rem;
+  padding-bottom: 0.125rem;
+}
+.shows-container__table-cont--venue-label {
   font-family: "NunitoSans";
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
-  font-size: 1.2rem;
-}
-@media screen and (min-width: 768px) {
-  #shows-container div .div__venue--bold {
-    font-family: "NunitoSans";
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    font-weight: 400;
-    font-weight: 700;
-  }
-}
-#shows-container div .div__location {
-  font-weight: 600;
   color: #AFAFAF;
-  font-family: "NunitoSans";
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-@media screen and (min-width: 768px) {
-  #shows-container div .div__location {
-    font-family: "NunitoSans";
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    font-weight: 400;
-    font-weight: 700;
-  }
-}
-#shows-container div .div__location--bold {
   font-weight: bold;
-  color: #323232;
+  font-size: 1.25rem;
+}
+.shows-container__table-cont--venue {
   font-family: "NunitoSans";
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  padding-bottom: 0.125rem;
 }
-@media screen and (min-width: 768px) {
-  #shows-container div .div__location--bold {
-    font-family: "NunitoSans";
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    font-weight: 400;
-    font-weight: 700;
-  }
+.shows-container__table-cont--location-label {
+  font-family: "NunitoSans";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  color: #AFAFAF;
+  font-weight: bold;
+  font-size: 1.25rem;
 }
-#shows-container .buy-ticket {
-  text-decoration: none;
-  background-color: #323232;
-  color: #FFFFFF;
-  border-radius: 0.4rem;
-  display: flex;
-  width: 43.9581rem;
-  height: 3rem;
-  text-align: center;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
+.shows-container__table-cont--location {
+  font-family: "NunitoSans";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  font-size: 1rem;
+  padding-bottom: 0.125rem;
+}
+.shows-container__table-cont--button-cont {
+  border-bottom: 0.0625rem solid #AFAFAF;
+  padding-bottom: 1rem;
+}
+.shows-container__table-cont--button {
   font-family: "NunitoSans";
   font-size: 0.625rem;
   font-weight: 1.25rem;
   font-weight: 700;
-  font-size: 1.2rem;
-}
-@media screen and (min-width: 768px) {
-  #shows-container .buy-ticket {
-    width: 12.9581rem;
-  }
+  font-size: 1.25rem;
+  background-color: #323232;
+  color: #FFFFFF;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  width: 44rem;
+  height: 4rem;
 }
 
 .footer {

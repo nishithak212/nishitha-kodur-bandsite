@@ -140,7 +140,7 @@
         background-size: cover;
         position: relative;
         overflow: hidden;
-        height: 49rem;
+        height: 35rem;
         flex-direction: column;
         flex-wrap: wrap;
         align-content: flex-start;
@@ -226,10 +226,11 @@
             @include bodyCopyM;
             color: #cccccc; 
             text-decoration: none;
-            width:45rem;
-            height:19rem;
-            top:50%;
-            margin-top: 2rem;
+            width:43rem;
+            height:10rem;
+            top:40%;
+            margin-left:1rem;
+            margin-top: 14rem;
             border-radius: 1rem;
 
             @include tablet{
@@ -244,137 +245,84 @@
                 height: 63%;
             }
         }
-            }
-    
+
+    }
 
 
-      #shows-container{
-        padding-left: 1rem;
-        padding-right: 1rem;
-
-        @include tablet{
-            padding-left:2.25rem;
-            padding-right:2.25rem;
-        }
-      
-        &__title, h2{
-            @include sectionHeaderM;
-            padding-top: 2rem;
-            font-size:2.5rem;
-            padding-left: 1rem;
-        padding-right: 1rem;
-
-        @include tablet{
-            @include sectionHeaderDT;
-            font-size:4.25rem;
-        }
-            
-        }
-
-        div{
-        @include bodyCopyM;
+    .shows-container{
         padding:1rem;
-        border-bottom: .0625rem solid $secondary-mercury;
+        margin:1rem;
 
-        @include tablet{
-            display:flex;
-            justify-content: space-between;
-            text-align: left;
+        &__title{
+            @include pageHeaderM;
+            padding-bottom:0.1875rem;
         }
 
-        &:hover{
-            background-color: $secondary-alabaster;
+        &__header-cont{
+            display:none;
         }
 
-        &:active{
-            background-color: $secondary-mercury;
-        }
-
-       .div__date{
-            font-weight: 600;
-            color:$primary-silver;
-            @include bodyCopyM;
-            font-size: 1.2rem;
-            font-weight: 600;
-            @include tablet{
-                @include bodyCopyDTReg;
-            }
-            &--bold{
-                color:$primary-bandSiteBlack;
+        &__table-cont{
+            &--date-label{
                 @include bodyCopyM;
-                font-size:1.2rem;
+                color:$primary-silver;
                 font-weight: bold;
-                @include tablet{
-                    @include bodyCopyDTBold;
-                }
+                font-size: 1.25rem;
             }
-            
-       }
-
-       .div__venue{
-        font-weight: 600;
-        color:$primary-silver;
-        @include bodyCopyM;
-        font-size: 1.2rem;
-        font-weight: 600;
-        @include tablet{
-            @include bodyCopyDTReg;
-        }
-        &--bold{
-            font-weight: bold;
-            color:$primary-bandSiteBlack;
-            @include bodyCopyM;
-            font-size:1.2rem;
-            @include tablet{
-                @include bodyCopyDTReg;
+            &--date{
+                @include bodyCopyM;
+                font-weight: bold;
+                color:$primary-bandSiteBlack;
+                font-size:1.25rem;
+                padding-bottom:0.125rem;
             }
-        }
-   }
 
-   .div__location{
-    font-weight: 600;
-    color:$primary-silver;
-    @include bodyCopyM;
-    font-size: 1.2rem;
-    font-weight: 600;
-    @include tablet{
-        @include bodyCopyDTReg;
+            &--venue-label{
+                @include bodyCopyM;
+                color:$primary-silver;
+                font-weight: bold;
+                font-size: 1.25rem;
+            }
+
+            &--venue{
+                @include bodyCopyM;
+                font-size:1rem;
+                padding-bottom:0.125rem;
+            }
+
+            &--location-label{
+                @include bodyCopyM;
+                color:$primary-silver;
+                font-weight: bold;
+                font-size: 1.25rem;
+            }
+
+            &--location{
+                @include bodyCopyM;
+                font-size:1rem;
+                padding-bottom:0.125rem;
+            }
+
+            &--button-cont{
+                border-bottom:0.0625rem solid $primary-silver;
+                padding-bottom:1rem;
+            }
+            &--button{
+                @include labelButtonsM;
+                font-size: 1.25rem;
+                background-color: $primary-bandSiteBlack;
+                color:$primary-white;
+                border-radius:0.25rem;
+                box-shadow: none;
+                width:44rem;
+                height:4rem;
+            }
+
+
+        }
+
     }
-    &--bold{
-        font-weight: bold;
-        color:$primary-bandSiteBlack;
-        @include bodyCopyM;
-        font-size:1.2rem;
-        @include tablet{
-            @include bodyCopyDTReg;
-        }
-    }
-}
 
-        }
-
-        .buy-ticket{
-            text-decoration: none;
-            background-color: $primary-bandSiteBlack;
-            color:$primary-white;
-            border-radius: 0.4rem;
-            display:flex;
-            width:43.9581rem;
-            height:3rem;
-            text-align: center;
-            justify-content: center;
-            align-content: center;
-            flex-direction: column;
-            @include labelButtonsM;
-            font-size:1.2rem;
-
-            @include tablet{
-                width:12.9581rem;
-            }
-
-        }
-
-      }
       .footer {
         background-color: $primary-bandSiteBlack;
         padding: 1.5rem 1rem;
