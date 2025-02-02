@@ -148,7 +148,7 @@
         position: relative;
 
         @include tablet{
-            height:54rem;
+            height:51rem;
         }
       
         @include desktop{
@@ -234,7 +234,10 @@
             border-radius: 1rem;
 
             @include tablet{
-                margin-left:2.25rem;
+                width:37rem;
+                height:13rem;
+                margin-top:20rem;
+                margin-left:2.5rem;
             }
 
             @include desktop{
@@ -256,18 +259,41 @@
         &__title{
             @include pageHeaderM;
             padding-bottom:0.1875rem;
+
+            @include tablet{
+                @include sectionHeaderDT;
+            }
         }
 
         &__header-cont{
             display:none;
+
+            @include tablet{
+                display:flex;
+                justify-content: space-between;
+                @include bodyCopyDTReg;
+                text-align:left;
+            }
         }
 
         &__table-cont{
+            @include tablet{
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom:0.0625rem solid $primary-silver;
+            }
             &--date-label{
                 @include bodyCopyM;
                 color:$primary-silver;
                 font-weight: bold;
                 font-size: 1.25rem;
+
+                @include tablet{
+                    display:none;
+                    margin: 1rem 0 1rem 0;
+                   
+                }
             }
             &--date{
                 @include bodyCopyM;
@@ -275,6 +301,14 @@
                 color:$primary-bandSiteBlack;
                 font-size:1.25rem;
                 padding-bottom:0.125rem;
+
+                @include tablet{
+                    margin:0;
+                    font-size:1rem;
+                    text-align:left;
+                    flex:0.84;
+
+                }
             }
 
             &--venue-label{
@@ -282,12 +316,25 @@
                 color:$primary-silver;
                 font-weight: bold;
                 font-size: 1.25rem;
+
+                @include tablet{
+                    display:none;
+                    margin:0;
+                    text-align:center;
+                }
             }
 
             &--venue{
                 @include bodyCopyM;
                 font-size:1rem;
                 padding-bottom:0.125rem;
+                @include tablet{
+                //align-self: right;
+                flex:0.69;
+                text-align:left;
+                margin:0;
+                font-size:1.15rem;
+                }
             }
 
             &--location-label{
@@ -295,17 +342,35 @@
                 color:$primary-silver;
                 font-weight: bold;
                 font-size: 1.25rem;
+                @include tablet{
+                    display:none;
+                    margin:0;
+                }
             }
 
             &--location{
                 @include bodyCopyM;
                 font-size:1rem;
                 padding-bottom:0.125rem;
+                @include tablet{
+                    margin:0;
+                    text-align:left;
+                    flex:0.84;
+                    font-size:1.15rem;
+                }
             }
 
             &--button-cont{
                 border-bottom:0.0625rem solid $primary-silver;
                 padding-bottom:1rem;
+
+                @include tablet{
+                    border:none;
+                    padding: 1rem;
+                    flex:0.3;
+                    display:flex;
+                    justify-content: flex-end;
+                }
             }
             &--button{
                 @include labelButtonsM;
@@ -316,9 +381,47 @@
                 box-shadow: none;
                 width:44rem;
                 height:4rem;
+
+                @include tablet{
+                    @include labelButtonsDT;
+                    width:11rem;
+                    height:2.5rem;
+                    margin-right:1rem;
+                    
+                }
+            }        
+
+        }
+        @include tablet{
+            &__header-cont{
+                display:flex;
+                justify-content:space-between;
+                @include bodyCopyDTBold;
+                color:$primary-silver;
             }
-
-
+            &__header--date{
+               // align-self:center;
+                margin:0;
+                flex:1.2;
+                text-align:left;
+            }
+            &__header--venue{
+                // align-self:center;
+                margin:0;
+                flex:1.2;
+                text-align:left;
+            }
+            &__header--location{
+                // align-self:center;
+                margin:0;
+                flex:1.4;
+                text-align:left;
+            }
+            &__header--button-head{
+                visibility: hidden;
+                flex:0.3;
+                text-align:right;
+            }
         }
 
     }
