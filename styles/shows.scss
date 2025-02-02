@@ -301,6 +301,14 @@
       justify-content: space-between;
       align-items: center;
       border-bottom: 0.0625rem solid $primary-silver;
+      &:hover{
+        background-color: $secondary-alabaster;
+        cursor:all-scroll;
+      }
+
+      &:active{
+        background-color: $secondary-mercury;
+      }
     }
     @include desktop {
       display: flex;
@@ -309,6 +317,15 @@
       border-bottom: 0.0625rem solid $primary-silver;
       width: 100%;
       gap: 3rem;
+
+      &:hover{
+        background-color: $secondary-alabaster;
+        cursor: pointer;
+      }
+
+      &:active{
+        background-color: $secondary-mercury;
+      }
     }
     &--date-label {
       @include bodyCopyM;

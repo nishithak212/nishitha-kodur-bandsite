@@ -373,6 +373,13 @@ body {
     align-items: center;
     border-bottom: 0.0625rem solid #AFAFAF;
   }
+  .shows-container__table-cont:hover {
+    background-color: #FAFAFA;
+    cursor: all-scroll;
+  }
+  .shows-container__table-cont:active {
+    background-color: #E1E1E1;
+  }
 }
 @media screen and (min-width: 1280px) {
   .shows-container__table-cont {
@@ -382,6 +389,13 @@ body {
     border-bottom: 0.0625rem solid #AFAFAF;
     width: 100%;
     gap: 3rem;
+  }
+  .shows-container__table-cont:hover {
+    background-color: #FAFAFA;
+    cursor: pointer;
+  }
+  .shows-container__table-cont:active {
+    background-color: #E1E1E1;
   }
 }
 .shows-container__table-cont--date-label {
