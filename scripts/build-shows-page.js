@@ -15,7 +15,7 @@ function table(arr){
     showContainer.appendChild(showContainerTitle);
 
     const title = document.createElement("h1");
-    title.classList.add("shows__title");
+    title.classList.add("shows-title");
     showContainerTitle.appendChild(title);
     title.innerText="Shows";
 
@@ -31,7 +31,7 @@ function table(arr){
     const dateHead=document.createElement("h3");
     dateHead.classList.add("shows-container__header--date");
     headerCont.appendChild(dateHead);
-    dateHead.innerText="DATES";
+    dateHead.innerText="DATE";
 
     const venueHead=document.createElement("h3");
     venueHead.classList.add("shows-container__header--venue");
