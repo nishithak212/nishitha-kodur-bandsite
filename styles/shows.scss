@@ -3,634 +3,612 @@
 @use "../styles/partials/global" as *;
 @use "../styles/partials/typography" as *;
 
-
-*{
-    box-sizing:border-box;
+* {
+  box-sizing: border-box;
 }
 
 .header {
-    display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   background-color: $primary-bandSiteBlack;
   padding-top: 1.25rem;
-  padding-bottom:0;
+  padding-bottom: 0;
   width: 100%;
-  @include tablet{ 
-    flex-direction:row;
-    
-}
+  @include tablet {
+    flex-direction: row;
+  }
 
-@include desktop{
-    flex-direction:row;
-    width:100%;
-    height:6.5rem;
-}
+  @include desktop {
+    flex-direction: row;
+    width: 100%;
+    height: 6.5rem;
+  }
 
   &__title {
     margin-bottom: 0.625rem;
-    @include tablet{
-    display:flex;
-    padding-left:2rem;
-    align-items:baseline;
+    @include tablet {
+      display: flex;
+      padding-left: 2rem;
+      align-items: baseline;
     }
-    @include desktop{
-        display:flex;
-    padding-left:11rem;
-    align-items:baseline;
-    align-items:center;
+    @include desktop {
+      display: flex;
+      padding-left: 11rem;
+      align-items: baseline;
+      align-items: center;
     }
-     
-    }
+  }
 
-    &__title-link{
-        text-decoration: none;
-    }
+  &__title-link {
+    text-decoration: none;
+  }
 
-    &__title-img {
+  &__title-img {
+    @include logo-bandsite;
+    @include tablet {
+      padding-left: 2rem;
+      height: 5.25rem;
+      width: 15.5rem;
+    }
+    @include desktop {
       @include logo-bandsite;
-      @include tablet{
-        padding-left:2rem;
-        height:5.25rem;
-        width:15.5rem;
-
-      }
-      @include desktop{
-        @include logo-bandsite;
-      }
     }
+  }
 
-
-&__navbar {
+  &__navbar {
     width: 100%;
     text-align: center;
     margin: 0;
     padding: 0;
-}
-    &__navbar-list {
-      display: flex;
-      list-style: none;
-      padding-top: 0;
-      margin-bottom: 0;
-      justify-content: space-evenly;
-      padding-left:0;
+  }
+  &__navbar-list {
+    display: flex;
+    list-style: none;
+    padding-top: 0;
+    margin-bottom: 0;
+    justify-content: space-evenly;
+    padding-left: 0;
 
-     @include tablet{
-        justify-content: flex-start;
-        gap:4rem;
-        padding-left:6rem;
-     }
-
-     @include desktop{
-        justify-content: flex-start;
-        gap:4rem;
-        padding-left:6rem;
-        @include labelButtonsDT;
-     }
+    @include tablet {
+      justify-content: flex-start;
+      gap: 4rem;
+      padding-left: 6rem;
     }
-      &__navbar-list-item {
-       a{
-            display:flex;
-            @include sectionHeaderM;
-          text-decoration: none;
-          color: $primary-white;
-          font-size: 1rem;
-          font-weight: $fontWeight-sectionHeaderM;
-          opacity: 0.8;
-          transition: opacity 0.3s, border-bottom 0.3s;
-          padding-bottom:2.22rem;
 
-          @include tablet{
-            @include subHeaderDT;
-            font-size:1.52rem;
-            padding-bottom:3.22rem;
-          }
+    @include desktop {
+      justify-content: flex-start;
+      gap: 4rem;
+      padding-left: 6rem;
+      @include labelButtonsDT;
+    }
+  }
+  &__navbar-list-item {
+    a {
+      display: flex;
+      @include sectionHeaderM;
+      text-decoration: none;
+      color: $primary-white;
+      font-size: 1rem;
+      font-weight: $fontWeight-sectionHeaderM;
+      opacity: 0.8;
+      transition: opacity 0.3s, border-bottom 0.3s;
+      padding-bottom: 2.22rem;
 
-          @include desktop{
-            font-size:1rem;
-            padding-bottom:2.22rem;
-          }
+      @include tablet {
+        @include subHeaderDT;
+        font-size: 1.52rem;
+        padding-bottom: 3.22rem;
+      }
 
-          .header__navbar-list-item-active {
-            display: flex;
-            font-weight: bold;
-            opacity: 1;
-            justify-content: flex-start;
-            // border-bottom: .25rem solid $primary-white;
-            // width:7rem;
-          }
-    
-          &:active {
-            opacity: 1;
-            border-bottom: .25rem solid $primary-white;
-            width:7rem;
-          }
-          
-        }
+      @include desktop {
+        font-size: 1rem;
+        padding-bottom: 2.22rem;
+      }
+
+      .header__navbar-list-item-active {
+        display: flex;
+        font-weight: bold;
+        opacity: 1;
+        justify-content: flex-start;
+        // border-bottom: .25rem solid $primary-white;
+        // width:7rem;
+      }
+
+      &:active {
+        opacity: 1;
+        border-bottom: 0.25rem solid $primary-white;
+        width: 7rem;
       }
     }
-  
+  }
+}
 
-    .hero {
-        display: flex;
-        justify-content: flex-start;
-        padding-left: 1.5rem;
-        background-image: url("../assets/Images/hero-shows.jpg");
-        background-position: center;
-        background-size: cover;
-        position: relative;
-        overflow: hidden;
-        height: 35rem;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: flex-start;
-        width: 100%;
-        position: relative;
+.hero {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 1.5rem;
+  background-image: url("../assets/Images/hero-shows.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  height: 35rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 100%;
+  position: relative;
 
-        @include tablet{
-            height:51rem;
-        }
-      
-        @include desktop{
-            height:46rem;
-        }
-      
-        &__overlay-color {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: $primary-bandSiteBlack;
-          opacity: 0.5;
-        }
-      
-        &__banner {
-          //display: flex;
-          margin-top: 1.0575rem;
-          top: 11.1875rem;
-          &-title,
-          &__banner-title{
-            color: $primary-white;
-            @include pageHeaderM;
-            font-size:1.5rem;
-            display: flex;
-            position: relative;
-            font-weight: 300;
-            margin-top:2rem;
+  @include tablet {
+    height: 51rem;
+  }
 
-            @include tablet{
-                padding-left:2.25rem;
-                margin-top:6.5rem;
-                @include sectionHeaderDT;
-            }
-            
-            @include desktop{
-                padding-left:8rem;
-                margin-bottom: 0;
-                bottom:-2rem;
-            }
-          }
+  @include desktop {
+    height: 46rem;
+  }
 
-        }
-&__banner-album{
+  &__overlay-color {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $primary-bandSiteBlack;
+    opacity: 0.5;
+  }
+
+  &__banner {
+    //display: flex;
+    margin-top: 1.0575rem;
+    top: 11.1875rem;
+    &-title,
+    &__banner-title {
+      color: $primary-white;
+      @include pageHeaderM;
+      font-size: 1.5rem;
+      display: flex;
+      position: relative;
+      font-weight: 300;
+      margin-top: 2rem;
+
+      @include tablet {
+        padding-left: 2.25rem;
+        margin-top: 6.5rem;
+        @include sectionHeaderDT;
+      }
+
+      @include desktop {
+        padding-left: 8rem;
+        margin-bottom: 0;
+        bottom: -2rem;
+      }
+    }
+  }
+  &__banner-album {
     @include sectionHeaderM;
-    color:$primary-white;
+    color: $primary-white;
     position: absolute;
     font-size: 3.2rem;
     line-height: 4rem;
-    width:70%;
+    width: 70%;
 
-    @include tablet{
-        padding-left:2.25rem;
-        @include pageHeaderDT;
-        font-size:5rem;
-        line-height: 5.5rem;
+    @include tablet {
+      padding-left: 2.25rem;
+      @include pageHeaderDT;
+      font-size: 5rem;
+      line-height: 5.5rem;
     }
 
-    @include desktop{
-        width:50%;
-        font-size: 3.8rem;
-        line-height:5rem;
-        padding-left: 8rem;
+    @include desktop {
+      width: 50%;
+      font-size: 3.8rem;
+      line-height: 5rem;
+      padding-left: 8rem;
     }
+  }
+  &__music-track {
+    position: relative;
+    font-size: 10px;
+    color: #cccccc;
+    line-break: anywhere;
+    word-break: normal;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    @include bodyCopyM;
+    color: #cccccc;
+    text-decoration: none;
+    width: 43rem;
+    height: 10rem;
+    top: 40%;
+    margin-left: 1rem;
+    margin-top: 14rem;
+    border-radius: 1rem;
+
+    @include tablet {
+      width: 37rem;
+      height: 13rem;
+      margin-top: 20rem;
+      margin-left: 2.5rem;
+    }
+
+    @include desktop {
+      margin-left: 2.25rem;
+      right: -129%;
+      //top: -1%;
+      width: 71%;
+      height: 63%;
+      bottom: 16.375rem;
+    }
+  }
 }
-        &__music-track{
-            position: relative;
-            font-size: 10px; 
-            color: #cccccc;
-            line-break: anywhere;
-            word-break: normal;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis; 
-            @include bodyCopyM;
-            color: #cccccc; 
-            text-decoration: none;
-            width:43rem;
-            height:10rem;
-            top:40%;
-            margin-left:1rem;
-            margin-top: 14rem;
-            border-radius: 1rem;
 
-            @include tablet{
-                width:37rem;
-                height:13rem;
-                margin-top:20rem;
-                margin-left:2.5rem;
-            }
+.shows-container {
+  h1 {
+    @include desktop {
+      @include sectionHeaderDT;
+      margin-top: 0;
+    }
+  }
+  padding: 1rem;
+  margin: 1rem;
 
-            @include desktop{
-                margin-left: 2.25rem;
-                right: -129%;
-                //top: -1%;
-                width: 71%;
-                height: 63%;
-                bottom:16.375rem;
+  @include desktop {
+    margin: 0 5rem;
+  }
+  &__details {
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 3rem;
+    }
+    &__all {
+      @include desktop {
+        width: 46.875rem;
+      }
+    }
+  }
 
-            }
-        }
+  &__title {
+    @include pageHeaderM;
+    padding-bottom: 0.1875rem;
 
+    @include tablet {
+      @include sectionHeaderDT;
     }
 
+    @include desktop {
+      @include sectionHeaderDT;
+    }
+  }
 
-    .shows-container{
+  &__header-cont {
+    display: none;
 
-        h1{
-            @include desktop{
-                @include sectionHeaderDT;
-                margin-top:0;
-            }
-        }
-        padding:1rem;
-        margin:1rem;
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      @include bodyCopyDTReg;
+      text-align: left;
+    }
+  }
 
-        @include desktop{
-           margin: 0 5rem;
-        }
-        &__details{
-            @include desktop{
-                display:flex;
-                justify-content: space-between;
-                padding-top:3rem;
-            }
-            &__all{
-                @include desktop{
-                    width:46.875rem;
-                }
-            }
-        }
+  &__table-cont {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 0.0625rem solid $primary-silver;
+    }
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: left;
+      border-bottom: 0.0625rem solid $primary-silver;
+      width: 100%;
+      gap: 3rem;
+    }
+    &--date-label {
+      @include bodyCopyM;
+      color: $primary-silver;
+      font-weight: bold;
+      font-size: 1.25rem;
 
+      @include tablet {
+        display: none;
+        margin: 1rem 0 1rem 0;
+      }
 
-        &__title{
-            @include pageHeaderM;
-            padding-bottom:0.1875rem;
+      @include desktop {
+        display: none;
+        margin: 1rem 0 1rem 0;
+      }
+    }
+    &--date {
+      @include bodyCopyM;
+      font-weight: bold;
+      color: $primary-bandSiteBlack;
+      font-size: 1.25rem;
+      padding-bottom: 0.125rem;
 
-            @include tablet{
-                @include sectionHeaderDT;
-            }
-
-            @include desktop{
-                @include sectionHeaderDT;
-                
-            }
-        }
-
-        &__header-cont{
-            display:none;
-
-            @include tablet{
-                display:flex;
-                justify-content: space-between;
-                @include bodyCopyDTReg;
-                text-align:left;
-            }
-        }
-
-        &__table-cont{
-            @include tablet{
-                display:flex;
-                justify-content: space-between;
-                align-items: center;
-                border-bottom:0.0625rem solid $primary-silver;
-                
-            }
-            @include desktop{
-                display: flex;
-                justify-content: space-between;
-                align-items: left;
-                border-bottom:0.0625rem solid $primary-silver;
-                width:100%;
-                gap:3rem;
-            }
-            &--date-label{
-                @include bodyCopyM;
-                color:$primary-silver;
-                font-weight: bold;
-                font-size: 1.25rem;
-
-                @include tablet{
-                    display:none;
-                    margin: 1rem 0 1rem 0;
-                }
-
-                @include desktop{
-                    display: none;
-                    margin: 1rem 0 1rem 0;
-                }
-            }
-            &--date{
-                @include bodyCopyM;
-                font-weight: bold;
-                color:$primary-bandSiteBlack;
-                font-size:1.25rem;
-                padding-bottom:0.125rem;
-
-                @include tablet{
-                    margin:0;
-                    font-size:1rem;
-                    text-align:left;
-                    flex:0.84;
-                }
-                @include desktop{
-                    margin: 0;
-                }
-            }
-
-            &--venue-label{
-                @include bodyCopyM;
-                color:$primary-silver;
-                font-weight: bold;
-                font-size: 1.25rem;
-
-                @include tablet{
-                    display:none;
-                    margin:0;
-                    text-align:center;
-                }
-
-                @include desktop{
-                    display:none;
-                    margin: 0;
-                }
-            }
-
-            &--venue{
-                @include bodyCopyM;
-                font-size:1rem;
-                padding-bottom:0.125rem;
-                @include tablet{
-                //align-self: right;
-                flex:0.69;
-                text-align:left;
-                margin:0;
-                font-size:1.15rem;
-                }
-                @include desktop{
-                    text-align:left;
-                    margin:0;
-                }
-            }
-
-            &--location-label{
-                @include bodyCopyM;
-                color:$primary-silver;
-                font-weight: bold;
-                font-size: 1.25rem;
-                @include tablet{
-                    display:none;
-                    margin:0;
-                }
-                @include desktop{
-                    display:none;
-                    margin:0;
-                }
-            }
-
-            &--location{
-                @include bodyCopyM;
-                font-size:1rem;
-                padding-bottom:0.125rem;
-                @include tablet{
-                    margin:0;
-                    text-align:left;
-                    flex:0.84;
-                    font-size:1.15rem;
-                }
-                @include desktop{
-                    text-align:left;
-                    margin:0;
-                }
-            }
-
-            &--button-cont{
-                border-bottom:0.0625rem solid $primary-silver;
-                padding-bottom:1rem;
-
-                @include tablet{
-                    border:none;
-                    padding: 1rem;
-                    flex:0.3;
-                    display:flex;
-                    justify-content: flex-end;
-                }
-                
-                @include desktop{
-                    border:none;
-                }
-            }
-            &--button{
-                @include labelButtonsM;
-                font-size: 1.25rem;
-                background-color: $primary-bandSiteBlack;
-                color:$primary-white;
-                border-radius:0.25rem;
-                box-shadow: none;
-                width:44rem;
-                height:4rem;
-
-                @include tablet{
-                    @include labelButtonsDT;
-                    width:11rem;
-                    height:2.5rem;
-                    margin-right:1rem;
-                    
-                }
-            }        
-
-        }
-        @include tablet{
-            &__header-cont{
-                display:flex;
-                justify-content:space-evenly;
-                @include bodyCopyDTBold;
-                color:$primary-silver;
-                @include desktop{
-                    display:flex;
-                    justify-content: space-between;
-                }
-            }
-            &__header--date{
-               // align-self:center;
-                margin:0;
-                flex:1.2;
-                text-align:left;
-                @include desktop{
-                    margin:0;
-                }
-            }
-            &__header--venue{
-                // align-self:center;
-                margin:0;
-                flex:1.2;
-                text-align:left;
-                @include desktop{
-                    margin:0;
-                }
-            }
-            &__header--location{
-                // align-self:center;
-                margin:0;
-                flex:1.4;
-                text-align:left;
-                @include desktop{
-                    margin:0;
-                }
-            }
-            &__header--button-head{
-                visibility: hidden;
-                flex:0.3;
-                text-align:right;
-                @include desktop{
-                    //  visibility: hidden;
-                  }
-            }
-            
-        }
-
+      @include tablet {
+        margin: 0;
+        font-size: 1rem;
+        text-align: left;
+        flex: 0.84;
+      }
+      @include desktop {
+        margin: 0;
+      }
     }
 
-      .footer {
-        background-color: $primary-bandSiteBlack;
-        padding: 1.5rem 1rem;
-        width: 100%;
-        position:relative;//
-      
-        @include tablet {
-          padding: 2rem 3rem;
-        }
-        @include desktop {
-          padding: 2rem 6rem;
-        }
-      
-        &__title {
-          @include pageHeaderM;
-          color: $primary-white;
-      
-          @include tablet {
-            @include sectionHeaderDT;
-          }
-      
-          @include desktop {
-            font-size: 1.8rem;
-            @include sectionHeaderDT;
-          }
-        }
-      
-        &__social {
-          display: flex;
-          gap: 1.5rem;
-          justify-content: flex-start;
-          margin-bottom: 1rem;
-          
-            @include tablet {
-              justify-content: center;
-              align-items: center;
-              width: 60%;
-              position: absolute;
-              right: 42%;
-              top: 17%;
-            }
-    
-            @include desktop {
-              justify-content: center;
-              align-items: center;
-              width: 60%;
-              position: absolute;
-              top: 19%;
-              left:1%;
-      
-          } 
+    &--venue-label {
+      @include bodyCopyM;
+      color: $primary-silver;
+      font-weight: bold;
+      font-size: 1.25rem;
+
+      @include tablet {
+        display: none;
+        margin: 0;
+        text-align: center;
+      }
+
+      @include desktop {
+        display: none;
+        margin: 0;
+      }
     }
-      
-        &__banddetails {
-          display: flex;
-          flex-direction: column;
-          gap: 1rem;
-          padding-bottom: 2rem;
-          color:$primary-white;
-          @include footerCopyM;
-      
-          @include tablet {
-            flex-direction: row;
-            justify-content: space-evenly;
-            text-align: left;
-            padding-right: 33rem;
-            @include footerCopyDT;
-          }
-      
-          @include desktop {
-            justify-content: space-evenly;
-            flex-direction: row;
-            justify-content: space-evenly;
-            text-align: left;
-            padding-right: 33rem;
-            gap: 4rem;
-            text-wrap: nowrap;
-            @include footerCopyDT;
-          }
-        }
-          &__brand-img{
-            display: flex;
-          gap: 1.5rem;
-          justify-content: flex-start;
-          margin-bottom: 1rem;
-    
-    @include tablet{
+
+    &--venue {
+      @include bodyCopyM;
+      font-size: 1rem;
+      padding-bottom: 0.125rem;
+      @include tablet {
+        //align-self: right;
+        flex: 0.69;
+        text-align: left;
+        margin: 0;
+        font-size: 1.15rem;
+      }
+      @include desktop {
+        text-align: left;
+        margin: 0;
+      }
+    }
+
+    &--location-label {
+      @include bodyCopyM;
+      color: $primary-silver;
+      font-weight: bold;
+      font-size: 1.25rem;
+      @include tablet {
+        display: none;
+        margin: 0;
+      }
+      @include desktop {
+        display: none;
+        margin: 0;
+      }
+    }
+
+    &--location {
+      @include bodyCopyM;
+      font-size: 1rem;
+      padding-bottom: 0.125rem;
+      @include tablet {
+        margin: 0;
+        text-align: left;
+        flex: 0.84;
+        font-size: 1.15rem;
+      }
+      @include desktop {
+        text-align: left;
+        margin: 0;
+      }
+    }
+
+    &--button-cont {
+      border-bottom: 0.0625rem solid $primary-silver;
+      padding-bottom: 1rem;
+
+      @include tablet {
+        border: none;
+        padding: 1rem;
+        flex: 0.3;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      @include desktop {
+        border: none;
+      }
+    }
+    &--button {
+      @include labelButtonsM;
+      font-size: 1.25rem;
+      background-color: $primary-bandSiteBlack;
+      color: $primary-white;
+      border-radius: 0.25rem;
+      box-shadow: none;
+      width: 44rem;
+      height: 4rem;
+
+      @include tablet {
+        @include labelButtonsDT;
+        width: 11rem;
+        height: 2.5rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+  @include tablet {
+    &__header-cont {
+      display: flex;
+      justify-content: space-evenly;
+      @include bodyCopyDTBold;
+      color: $primary-silver;
+      @include desktop {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    &__header--date {
+      // align-self:center;
+      margin: 0;
+      flex: 1.2;
+      text-align: left;
+      @include desktop {
+        margin: 0;
+      }
+    }
+    &__header--venue {
+      // align-self:center;
+      margin: 0;
+      flex: 1.2;
+      text-align: left;
+      @include desktop {
+        margin: 0;
+      }
+    }
+    &__header--location {
+      // align-self:center;
+      margin: 0;
+      flex: 1.4;
+      text-align: left;
+      @include desktop {
+        margin: 0;
+      }
+    }
+    &__header--button-head {
+      visibility: hidden;
+      flex: 0.3;
+      text-align: right;
+      @include desktop {
+        //  visibility: hidden;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $primary-bandSiteBlack;
+  padding: 1.5rem 1rem;
+  width: 100%;
+  position: relative; //
+
+  @include tablet {
+    padding: 2rem 3rem;
+  }
+  @include desktop {
+    padding: 2rem 6rem;
+  }
+
+  &__title {
+    @include pageHeaderM;
+    color: $primary-white;
+
+    @include tablet {
+      @include sectionHeaderDT;
+    }
+
+    @include desktop {
+      font-size: 1.8rem;
+      @include sectionHeaderDT;
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+
+    @include tablet {
+      justify-content: center;
+      align-items: center;
+      width: 60%;
+      position: absolute;
+      right: 42%;
+      top: 17%;
+    }
+
+    @include desktop {
+      justify-content: center;
+      align-items: center;
+      width: 60%;
+      position: absolute;
+      top: 19%;
+      left: 1%;
+    }
+  }
+
+  &__banddetails {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    color: $primary-white;
+    @include footerCopyM;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-evenly;
+      text-align: left;
+      padding-right: 33rem;
+      @include footerCopyDT;
+    }
+
+    @include desktop {
+      justify-content: space-evenly;
+      flex-direction: row;
+      justify-content: space-evenly;
+      text-align: left;
+      padding-right: 33rem;
+      gap: 4rem;
+      text-wrap: nowrap;
+      @include footerCopyDT;
+    }
+  }
+  &__brand-img {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+
+    @include tablet {
       justify-content: flex-end;
       position: absolute;
       right: 4%;
       top: 15%;
     }
-    @include desktop{
+    @include desktop {
       justify-content: flex-end;
       position: absolute;
       top: 16%;
       right: 8%;
-      
     }
-    
-          }
-    
-          &__brand-img-logo{
-            @include logo-bandsite;
-          }
-      
-        &__copyright {
-          @include footerCopyM;
-          color: $primary-white;
-          text-align: left;
-      
-          @include tablet {
-            text-align: left;
-            @include footerCopyDT;
-          }
-      
-          @include desktop {
-            text-align: left;
-            @include footerCopyDT;
-          }
-        }
+  }
+
+  &__brand-img-logo {
+    @include logo-bandsite;
+  }
+
+  &__copyright {
+    @include footerCopyM;
+    color: $primary-white;
+    text-align: left;
+
+    @include tablet {
+      text-align: left;
+      @include footerCopyDT;
     }
+
+    @include desktop {
+      text-align: left;
+      @include footerCopyDT;
+    }
+  }
+}
