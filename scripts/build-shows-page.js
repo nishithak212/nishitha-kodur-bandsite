@@ -98,12 +98,12 @@ function table(arr) {
 
         //Click event for selected row
 
-        tableCont.addEventListener("click",()=>{
-           document
-           .querySelectorAll(".shows-container__table-cont")
-            .forEach(row=> row.classList.remove("shows-container__table-cont--selected"));
+        tableCont.addEventListener("click", () => {
+            document
+                .querySelectorAll(".shows-container__table-cont")
+                .forEach(row => row.classList.remove("shows-container__table-cont--selected"));
             tableCont.classList.add("shows-container__table-cont--selected");
-           // console.log("row is clicked:", tableCont);
+            // console.log("row is clicked:", tableCont);
         });
     }
 
