@@ -1,24 +1,43 @@
-const shows = [
-    { date: "Mon Sept 09 2024", venue: "Ronald Lane", location: "San Fransico, CA" },
-    { date: "Tue Sept 17 2024", venue: "Pier 3 East", location: "San Fransico, CA" },
-    { date: "Sat Oct 12 2024", venue: "View Lounge", location: "San Fransico, CA" },
-    { date: "Sat Nov 16 2024", venue: "Hyatt Agency", location: "San Fransico, CA" },
-    { date: "Fri Nov 29 2024", venue: "Moscow Center", location: "San Fransico, CA" },
-    { date: "Wed Dec 18 2024", venue: "Press Club", location: "San Fransico, CA" },
-];
+import BandSiteApi from "./band-site-api.js";
+
+const api = new BandSiteApi("d0e75d6f-acc0-42fb-b5ef-3c6b0d4b2721");
 
 
-function table(arr) {
+async function fetchAndDisplayShows(){
+    try{
+        const showsData = await api.getShows();
 
-    const showContainer = document.querySelector(".shows-container__details");
-    const showContainerTitle = document.createElement("div");
+        if (!showsData || showsData.length===0){
+            throw new Error("No shows data available");
+        }
+        table(showsData);
+    } catch (error){
+        console.error("Error fetching shows data:", error);
+    }
+}
+
+function formatDate(timestamp){
+
+    const showDate = new Date(timestamp);
+    const weekday=showDate.toLocaleString('en-US',{weekday:"short",});
+    const month=showDate.toLocaleString('en-us',{month:"short"});
+    const day=showDate.getDate().toString().padStart(2,0);
+    const year=showDate.getFullYear();
+
+    return `${weekday} ${month} ${day} ${year}`;
+
+}
+
+function table(arr){
+    const showContainer=document.querySelector(".shows-container__details");
+    const showContainerTitle=document.createElement("div");
     showContainerTitle.classList.add("shows-container__title");
     showContainer.appendChild(showContainerTitle);
 
-    const title = document.createElement("h1");
+    const title=document.createElement("h1");
     title.classList.add("shows-title");
     showContainerTitle.appendChild(title);
-    title.innerText = "Shows";
+    title.innerText="Shows";
 
     const showsCont = document.createElement("div");
     showsCont.classList.add("shows-container__all");
@@ -48,8 +67,7 @@ function table(arr) {
     headerCont.appendChild(buttonHead);
     buttonHead.innerText = "BUY TICKETS";
 
-
-    for (let i = 0; i < shows.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         const tableCont = document.createElement("div");
         tableCont.classList.add("shows-container__table-cont");
         showsCont.appendChild(tableCont);
@@ -63,7 +81,10 @@ function table(arr) {
         const date = document.createElement("h4");
         date.classList.add("shows-container__table-cont--date");
         tableCont.appendChild(date);
-        date.innerText = arr[i]["date"];
+        
+        
+        const formattedDate=formatDate(arr[i]["date"]);
+        date.innerText=formattedDate;
 
         const venueLabel = document.createElement("h3");
         venueLabel.classList.add("shows-container__table-cont--venue-label");
@@ -74,7 +95,7 @@ function table(arr) {
         const venue = document.createElement("h4");
         venue.classList.add("shows-container__table-cont--venue");
         tableCont.appendChild(venue);
-        venue.innerText = arr[i]["venue"];
+        venue.innerText = arr[i]["place"];
 
         const locationLabel = document.createElement("h3");
         locationLabel.classList.add("shows-container__table-cont--location-label");
@@ -106,7 +127,6 @@ function table(arr) {
             // console.log("row is clicked:", tableCont);
         });
     }
-
 }
 
-table(shows);
+document.addEventListener("DOMContentLoaded",fetchAndDisplayShows);
